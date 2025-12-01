@@ -1,0 +1,9 @@
+{
+    "penny": 0,
+    "nickel": 1,
+    "dime": 2,
+    "lucky_penny": 3,
+    "key": 4,
+    "golden_key": 5,
+    "bomb": 6
+}
