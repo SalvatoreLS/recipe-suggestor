@@ -9,7 +9,7 @@ Two versions of the assistant have been developed to explore different approache
 *   **Java Version**: Utilizes ModelZoo for object detection.
 *   **C++ Version**: Leverages OpenCV and LibTorch for real-time image processing.
 
-The dual-development approach was meant to address some incompatibilities found with YOLO models.
+The dual-development approach was meant to address some incompatibilities found with YOLO models and detections.
 Despite some issues are attenuated by the C++ version, some other issues arose with the implementation.
 
 ## Key Features
