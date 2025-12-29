@@ -39,11 +39,9 @@ Detector::Detector(const std::string& model_path_prefix, int wid, int hei)
     try {
         model = torch::jit::load(model_path);
         model.eval();
-        std::cout << "[INFO] Model loaded successfully" << std::endl;
         
         std::filesystem::path model_path_obj(model_path_prefix);
         std::filesystem::path synset_path = std::filesystem::absolute(model_path_obj).parent_path() / "synset.txt";
-        std::cout << "Synset path: " << synset_path << std::endl;
         class_names = load_class_names(synset_path.string());
         std::cout << "[INFO] Loaded " << class_names.size() << " class names" << std::endl;
     } catch (const c10::Error& e) {
@@ -60,8 +58,6 @@ cv::Mat Detector::_preprocess_image(const cv::Mat& frame) {
         cv::Scalar(0, 0, 0),
         true,
         false);
-    
-    std::cout << "Preprocessed shape: " << blob.size << std::endl;
     return blob;
 }
 
@@ -88,16 +84,6 @@ std::vector<Prediction> Detector::_filter_predictions(const torch::Tensor& outpu
             class_logits[c] = output_cpu[0][i][4 + c].item<float>();
         }
 
-        if (i == 0) {
-            std::cout << "First detection raw values: x=" << output_cpu[0][i][0].item<float>()
-                      << ", y=" << output_cpu[0][i][1].item<float>()
-                      << ", w=" << output_cpu[0][i][2].item<float>()
-                      << ", h=" << output_cpu[0][i][3].item<float>() << std::endl;
-            std::cout << "First detection class logits (first 5): ";
-            for(int k=0; k<std::min(5, num_classes); ++k) std::cout << class_logits[k] << " ";
-            std::cout << std::endl;
-        }
-        
         // Softmax to get probabilities
         std::vector<float> class_probs(num_classes);
         float max_logit = *std::max_element(class_logits.begin(), class_logits.end());
@@ -200,7 +186,7 @@ cv::Mat Detector::visualize_detections(const cv::Mat& frame, const std::vector<P
     for (const auto& pred : predictions) {
         cv::Rect bbox = pred.bbox & cv::Rect(0, 0, frame.cols, frame.rows);
         cv::rectangle(vis_image, bbox, cv::Scalar(0, 255, 0), 2);
-        std::string class_name = (pred.classId < class_names.size()) ? class_names[pred.classId] : std::to_string(pred.classId);
+        std::string class_name = (pred.classId < (int)class_names.size()) ? class_names[pred.classId] : std::to_string(pred.classId);
         std::string label = class_name + ": " + cv::format("%.2f", pred.confidence);
         int baseLine;
         cv::Size labelSize = cv::getTextSize(label, cv::FONT_HERSHEY_SIMPLEX, 0.5, 1, &baseLine);

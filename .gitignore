@@ -46,3 +46,9 @@ dist/
 Thumbs.db
 .DS_Store
 .env.local
+.ruff_cache
+debug*
+test/
+tests/
+recipe_suggestor_java/README.md
+ISSUES.md

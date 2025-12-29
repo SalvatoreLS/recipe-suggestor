@@ -43,9 +43,10 @@ if(USE_LIBTORCH)
     target_link_libraries(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/libtorch/lib/libtorch.so)
     target_link_libraries(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/libtorch/lib/libtorch_cpu.so)
     target_link_libraries(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/libtorch/lib/libc10.so)
+endif()
 
-    # Add detector test torch executable
-    add_executable(detector_test_torch tests/detector_test_torch.cpp src/pipeline/detector_torch.cpp src/crafting_computation/crafting_computator.cpp src/custom_onnx_import.cpp)
-    target_link_libraries(detector_test_torch PRIVATE ${OpenCV_LIBS} ${CMAKE_SOURCE_DIR}/libtorch/lib/libtorch.so ${CMAKE_SOURCE_DIR}/libtorch/lib/libtorch_cpu.so ${CMAKE_SOURCE_DIR}/libtorch/lib/libc10.so)
-    target_include_directories(detector_test_torch PRIVATE ${CMAKE_SOURCE_DIR}/include ${CMAKE_SOURCE_DIR}/libtorch/include ${CMAKE_SOURCE_DIR}/libtorch/include/torch/csrc/api/include)
+# Test Executable
+if(NOT USE_LIBTORCH)
+    add_executable(detector_test tests/detector_test.cpp src/pipeline/detector.cpp)
+    target_link_libraries(detector_test PRIVATE ${OpenCV_LIBS})
 endif()
