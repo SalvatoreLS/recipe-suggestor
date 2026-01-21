@@ -55,6 +55,7 @@ recipe_suggestor_java/README.md
 recipe_suggestor_cpp/build/
 recipe_suggestor_cpp/libtorch/
 recipe_suggestor_cpp/outputs/
+recipe_suggestor_cpp/lib
 
 # Models / Data / Training
 models_training/runs/
