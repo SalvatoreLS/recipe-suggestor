@@ -4,6 +4,7 @@
 .DS_Store
 Thumbs.db
 ISSUES.md
+TODO.md
 
 # Editors / IDEs
 .idea/
@@ -18,6 +19,7 @@ ISSUES.md
 *.iml
 *.iws
 *.ipr
+.clang-format
 
 # Python
 __pycache__/

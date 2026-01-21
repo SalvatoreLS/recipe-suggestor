@@ -4,9 +4,9 @@
 #include <cstddef>
 #include <initializer_list>
 #include <string>
-#include <mutex>
-#include <shared_mutex>
+#include <atomic>
 #include <iterator>
+#include <thread>
 
 namespace cust {
 template<typename T>
@@ -22,8 +22,24 @@ template<typename T>
 class CircularList {
 private:
     Node<T>* head;
-    std::size_t size_;
-    mutable std::shared_mutex mtx_;
+    std::atomic<std::size_t> size_;
+    mutable std::atomic_flag lock_ = ATOMIC_FLAG_INIT;
+
+    void lock() const {
+        while (lock_.test_and_set(std::memory_order_acquire)) {
+            std::this_thread::yield();
+        }
+    }
+
+    void unlock() const {
+        lock_.clear(std::memory_order_release);
+    }
+
+    struct LockGuard { // RAII
+        const CircularList* list;
+        LockGuard(const CircularList* l) : list(l) { l->lock(); }
+        ~LockGuard() { list->unlock(); }
+    };
 
     void clear_unlocked() {
         if (!this->head) return;
@@ -67,8 +83,8 @@ private:
 public:
     CircularList() : head(nullptr), size_(0) {}
     
-    CircularList(const CircularList& other) : head(nullptr), size_(0), mtx_() {
-    std::shared_lock<std::shared_mutex> lock(other.mtx_);
+    CircularList(const CircularList& other) : head(nullptr), size_(0) {
+    LockGuard lock(other);
     if (!other.head) return;
     
     Node<T>* curr = other.head;
@@ -81,7 +97,7 @@ public:
     ~CircularList() { clear(); }
     
     void add(const T& value) {
-        std::unique_lock<std::shared_mutex> lock(mtx_);
+        LockGuard lock(this);
         Node<T>* node = new Node<T>(value);
         if (this->head == nullptr) {
             this->head = node;
@@ -98,7 +114,7 @@ public:
     }
     
     Node<T>* find(const T& value) {
-        std::shared_lock<std::shared_mutex> lock(mtx_);
+        LockGuard lock(this);
         if (!this->head) return nullptr;
         Node<T>* curr = this->head;
         do {
@@ -109,7 +125,7 @@ public:
     }
     
     const Node<T>* find(const T& value) const {
-        std::shared_lock<std::shared_mutex> lock(mtx_);
+        LockGuard lock(this);
         if (!this->head) return nullptr;
         Node<T>* curr = this->head;
         do {
@@ -121,12 +137,12 @@ public:
     
     template<typename... Args>
     void add_all(Args&&... values) {
-        std::unique_lock<std::shared_mutex> lock(mtx_);
+        LockGuard lock(this);
         (add_unlocked(std::forward<Args>(values)), ...);
     }
     
     void clear() {
-        std::unique_lock<std::shared_mutex> lock(mtx_);
+        LockGuard lock(this);
         if (!this->head) return;
         Node<T>* curr = this->head->next;
         while (curr != this->head) {
@@ -140,19 +156,19 @@ public:
     }
     
     T* next(const T& current) {
-        std::shared_lock<std::shared_mutex> lock(mtx_);
-        Node<T>* node = find(current);
+        LockGuard lock(this);
+        Node<T>* node = find_unlocked(current);
         return node ? &(node->next->value) : nullptr;
     }
     
     T* previous(const T& current) {
-        std::shared_lock<std::shared_mutex> lock(mtx_);
-        Node<T>* node = find(current);
+        LockGuard lock(this);
+        Node<T>* node = find_unlocked(current);
         return node ? &(node->prev->value) : nullptr;
     }
     
     std::string to_string() {
-        std::shared_lock<std::shared_mutex> lock(mtx_);
+        LockGuard lock(this);
         std::string return_string;
         if (!head) {
             return "[]";
@@ -169,7 +185,7 @@ public:
     }
     
     void rotate(int n) {
-        std::unique_lock<std::shared_mutex> lock(mtx_);
+        LockGuard lock(this);
         if (!this->head || size_ == 0 || n % this->size_ == 0) return;
         n = n % size_;
         if (n < 0) n += size_;
@@ -179,7 +195,7 @@ public:
     }
     
     void anti_rotate(int n) {
-        std::unique_lock<std::shared_mutex> lock(mtx_);
+        LockGuard lock(this);
         if (!this->head || size_ == 0 || n % this->size_ == 0) return;
         n = n % size_;
         if (n < 0) n += size_;
@@ -189,8 +205,8 @@ public:
     }
     
     void remove(const T& value) {
-        std::unique_lock<std::shared_mutex> lock(mtx_);
-        Node<T>* node = find(value);
+        LockGuard lock(this);
+        Node<T>* node = find_unlocked(value);
         if (node == nullptr) return;
         if (this->size_ == 1) {
             delete node;
@@ -212,8 +228,7 @@ public:
     }
     
     std::size_t size() const {
-        std::shared_lock<std::shared_mutex> lock(mtx_);
-        return size_;
+        return size_.load();
     }
 
     // Forward iterator to support range-based for loops: for (auto &el : circularList)
@@ -279,7 +294,7 @@ public:
     };
 
     iterator begin() {
-        std::shared_lock<std::shared_mutex> lock(mtx_);
+        LockGuard lock(this);
         if (!head) return iterator(nullptr, nullptr);
         return iterator(head, head);
     }
@@ -289,7 +304,7 @@ public:
     }
 
     const_iterator begin() const {
-        std::shared_lock<std::shared_mutex> lock(mtx_);
+        LockGuard lock(this);
         if (!head) return const_iterator(nullptr, nullptr);
         return const_iterator(head, head);
     }
@@ -305,15 +320,16 @@ public:
     CircularList& operator=(const CircularList& other) {
         if (this == &other) return *this;
         
-        // Lock both mutexes
-        std::unique_lock<std::shared_mutex> this_lock(mtx_, std::defer_lock);
-        std::shared_lock<std::shared_mutex> other_lock(other.mtx_, std::defer_lock);
-        std::lock(this_lock, other_lock);  // Deadlock-free locking
+        // Lock both carefully avoiding deadlock by locking by address order
+        const CircularList* first = this;
+        const CircularList* second = &other;
+        if (first > second) std::swap(first, second);
         
-        // Clear current contents
+        first->lock();
+        second->lock();
+        
         this->clear_unlocked();
         
-        // Copy from other
         if (other.head) {
             Node<T>* curr = other.head;
             do {
@@ -322,14 +338,16 @@ public:
             } while (curr != other.head);
         }
         
+        second->unlock();
+        first->unlock();
+        
         return *this;
     }
 
-    // Move constructor
-    CircularList(CircularList&& other) noexcept : head(nullptr), size_(0), mtx_() {
-        std::unique_lock<std::shared_mutex> lock(other.mtx_);
+    CircularList(CircularList&& other) noexcept : head(nullptr), size_(0) {
+        LockGuard lock(&other);
         head = other.head;
-        size_ = other.size_;
+        size_ = other.size_.load();
         other.head = nullptr;
         other.size_ = 0;
     }
@@ -338,16 +356,21 @@ public:
     CircularList& operator=(CircularList&& other) noexcept {
         if (this == &other) return *this;
         
-        // Lock both mutexes
-        std::unique_lock<std::shared_mutex> this_lock(mtx_, std::defer_lock);
-        std::unique_lock<std::shared_mutex> other_lock(other.mtx_, std::defer_lock);
-        std::lock(this_lock, other_lock);  // Deadlock-free locking
+        const CircularList* first = this;
+        const CircularList* second = &other;
+        if (first > second) std::swap(first, second);
+        
+        first->lock();
+        second->lock();
         
         this->clear_unlocked();
         head = other.head;
-        size_ = other.size_;
+        size_ = other.size_.load();
         other.head = nullptr;
         other.size_ = 0;
+        
+        second->unlock();
+        first->unlock();
         
         return *this;
     }
