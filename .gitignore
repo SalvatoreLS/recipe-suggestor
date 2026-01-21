@@ -1,20 +1,13 @@
-# C++ version
-recipe_suggestor_cpp/build/
-recipe_suggestor_cpp/libtorch/
+# General files
+.env
+.env.local
+.DS_Store
+Thumbs.db
+ISSUES.md
 
-# Java version
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-.flattened-pom.xml
+# Editors / IDEs
 .idea/
-*.iml
-*.iws
-*.ipr
+.vscode/
 .eclipse/
 .classpath
 .project
@@ -22,18 +15,11 @@ dependency-reduced-pom.xml
 *.swp
 *.swo
 *~
-.vscode/
-.DS_Store
-*.class
-*.jar
-*.war
-*.ear
-*.log
-*.zip
-*.tar.gz
-*.rar
-opencodetmp/
-*.tar.gz
+*.iml
+*.iws
+*.ipr
+
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
@@ -43,12 +29,42 @@ __pycache__/
 build/
 dist/
 *.egg
-Thumbs.db
-.DS_Store
-.env.local
 .ruff_cache
 debug*
-test/
-tests/
+
+# Java / Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.flattened-pom.xml
+*.class
+*.jar
+*.war
+*.ear
+recipe_suggestor_java/bin/
+recipe_suggestor_java/output_test_image.jpg
 recipe_suggestor_java/README.md
-ISSUES.md
+
+# C++
+recipe_suggestor_cpp/build/
+recipe_suggestor_cpp/libtorch/
+recipe_suggestor_cpp/outputs/
+
+# Models / Data / Training
+models_training/runs/
+models_training/lib/
+models_training/BoC---TBOI*
+yolov8n.pt
+cp.txt
+
+# Specific Binaries / Temp / Archives
+opencodetmp/
+test_cpp
+*.log
+*.zip
+*.tar.gz
+*.rar
