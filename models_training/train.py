@@ -16,7 +16,8 @@ ROBOFLOW_VERSION = int(os.getenv("ROBOFLOW_VERSION", 1))
 # ----------------------------------------
 
 IMG_SIZE : int = 640
-EPOCHS : int = 1
+EPOCHS : int = 200
+PATIENCE : int = 10
 
 def download_dataset():
     """
@@ -65,7 +66,7 @@ def train_and_export():
 
         # 3. Train the model
         print("Starting training...")
-        results = model.train(data=data_path, epochs=EPOCHS, imgsz=IMG_SIZE)
+        results = model.train(data=data_path, epochs=EPOCHS, imgsz=IMG_SIZE, patience=PATIENCE)
 
         # 4. Export the model
         print("Exporting model to ONNX...")
