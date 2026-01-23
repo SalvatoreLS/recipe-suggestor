@@ -1,7 +1,10 @@
 #include "pipeline/pipeline.hpp"
 #include <iostream>
+#include <sys/types.h>
 #include <thread>
 #include <future>
+#include <map>
+#include "data_structures/circular_list.hpp"
 #include "utils.hpp"
 #include <opencv2/opencv.hpp>
 
@@ -50,6 +53,10 @@ void Pipeline::run() {
 
     this->running = true;
     std::cout << "[Pipeline] Running...\n";
+
+    // Structures for detections
+    cust::CircularList<types::ItemID> boc;
+    std::map<types::ItemID, types::Quantity> floor_obj; // (id, quantity)
     
     while (this->is_running()) {
         ++this->frame_count;
@@ -62,8 +69,10 @@ void Pipeline::run() {
         ScreenCapture floor_img = {nullptr, 0, 0};
         ScreenCapture boc_img = {nullptr, 0, 0};
         
+        // Process frame
         this->router->route(curr_frame, &floor_img, &boc_img);
 
+        // Detect Floor
         if (floor_img.data) {
             cv::Mat floor_mat = screen_capture_to_mat(floor_img);
             if (!floor_mat.empty()) {
@@ -71,6 +80,7 @@ void Pipeline::run() {
             }
         }
 
+        // Detect BoC
         if (boc_img.data) {
             cv::Mat boc_mat = screen_capture_to_mat(boc_img);
             if (!boc_mat.empty()) {
@@ -78,9 +88,11 @@ void Pipeline::run() {
             }
         }
         
-        // Suggestion commented out
-        // this->suggestor->suggest(...);
-        
+        // TODO: define a data structure for the suggestion
+
+        // Retrive suggestions
+        this->suggestor->suggest(boc, floor_obj);
+
         delete curr_frame; 
     }
 }

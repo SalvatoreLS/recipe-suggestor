@@ -5,12 +5,13 @@
 #include "data_structures/circular_list.hpp"
 #include <map>
 #include <sys/types.h>
+#include "types.hpp"
 
 class RecipeSuggestor {
 
 public:
     RecipeSuggestor();
-    void suggest(cust::CircularList<u_int16_t> boc, std::map<u_int16_t, u_int8_t> floor_obj); // TODO: define arguments and return type. It will receive both floor objects and BoC content
+    void suggest(cust::CircularList<types::ItemID>& boc, std::map<types::ItemID, types::Quantity>& floor_obj); // It will receive both floor objects and BoC content
 
 private:
     // TODO: Add functions for querying the "dataset" and returning ranked recipes

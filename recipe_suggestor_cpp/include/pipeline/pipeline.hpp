@@ -1,4 +1,5 @@
 #include <sys/types.h>
+#include "types.hpp"
 #include <utility>
 #include <atomic>
 #include "nodes/boc_detector.hpp"
@@ -22,7 +23,7 @@ private:
     std::pair<int, int> floor_shape_;
     std::atomic<bool> running = false;
     std::atomic<bool> initialized = false;
-    std::atomic<u_int16_t> frame_count = 0; 
+    std::atomic<types::FrameCount> frame_count = 0; 
     
     // Threads-related objects
     FrameCapturer* capturer = nullptr;

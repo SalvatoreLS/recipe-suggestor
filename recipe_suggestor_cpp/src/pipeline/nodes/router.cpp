@@ -1,4 +1,5 @@
 #include "pipeline/nodes/router.hpp"
+#include "constants.hpp"
 #include <sys/types.h>
 
 Router::Router() {}
@@ -11,9 +12,9 @@ void Router::route(ScreenCapture* source_img, ScreenCapture* floor_img, ScreenCa
 }
 
 void Router::process_boc(ScreenCapture* source, ScreenCapture* dest) {
-    u_int16_t crop_width = static_cast<u_int16_t>(source->width * 0.35);
-    u_int16_t crop_height = static_cast<u_int16_t>(source->height * 0.18);
-    int start_X = static_cast<int>(0.97 * source->width) - crop_width;
+    u_int16_t crop_width = static_cast<u_int16_t>(source->width * constants::crop_width_factor);
+    u_int16_t crop_height = static_cast<u_int16_t>(source->height * constants::crop_height_factor);
+    int start_X = static_cast<int>(constants::crop_start_x_factor * source->width) - crop_width;
     int start_Y = source->height - crop_height;
     
     // Allocate destination

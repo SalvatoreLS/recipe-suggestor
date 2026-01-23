@@ -12,7 +12,7 @@ Detector::Detector(const std::string& model_path, int wid, int hei)
     
     try {
         Ort::SessionOptions sessionOptions;
-        sessionOptions.SetIntraOpNumThreads(1);
+        sessionOptions.SetIntraOpNumThreads(constants::intra_op_num_threads);
         sessionOptions.SetGraphOptimizationLevel(GraphOptimizationLevel::ORT_ENABLE_BASIC);
         
         session = Ort::Session(env, model_path.c_str(), sessionOptions);
@@ -62,7 +62,7 @@ cv::Mat Detector::_preprocess_image(const cv::Mat& frame) {
     // YOLO typically expects RGB, normalized 0-1.
     // blobFromImage handles resizing, swapping BGR->RGB (if swapRB=true), and scaling.
     cv::dnn::blobFromImage(frame, blob,
-        1.0 / 255.0,
+        constants::pixel_scale,
         cv::Size(img_width, img_height),
         cv::Scalar(0, 0, 0),
         true, // swapRB
@@ -72,27 +72,13 @@ cv::Mat Detector::_preprocess_image(const cv::Mat& frame) {
 
 std::vector<Prediction> Detector::_filter_predictions(const std::vector<float>& output, const std::vector<int64_t>& shape, const cv::Size& img_size, float conf_threshold) {
     std::vector<Prediction> preds;
-    
-    // YOLOv8/v5 ONNX output shape is typically [1, 84, 8400] (Batch, Class+Box, Anchors) or [1, 25200, 85] depending on export.
-    // We need to handle the shape correctly.
-    // Based on test_cpp, we are getting a flat vector.
-    // Assuming shape is [1, dimensions, detections] or [1, detections, dimensions]
-    
     if (shape.size() < 3) return preds;
 
     int64_t dimensions = shape[1];
     int64_t rows = shape[2];
     
-    // Check if we need to transpose: YOLOv8 often outputs [1, 4+classes, N]
-    bool is_yolov8_format = (dimensions < rows && dimensions > 4); 
-    
-    if (is_yolov8_format) {
-        // dimensions = entries per anchor (cx, cy, w, h, class_scores...)
-        // rows = number of anchors
-        
-        // Actually, YOLOv8 default export is [1, 84, 8400] where 84 is (cx, cy, w, h, 80 classes)
-        // We need to iterate over the 8400 columns.
-        
+    // Check for YOLOv8 transposed output [1, 4+classes, N]
+    if (dimensions < rows && dimensions > 4) {
         int num_classes = dimensions - 4;
         const float* data = output.data();
         
@@ -101,15 +87,8 @@ std::vector<Prediction> Detector::_filter_predictions(const std::vector<float>& 
         std::vector<int> classIds;
 
         for (int i = 0; i < rows; ++i) {
-             // Extract class scores
              float max_score = 0.0f;
              int max_class_id = -1;
-             
-             // Stride is rows (since it's column-major if we view it as [dim, rows] but usually data is linear C-order [batch, dim, rows])
-             // wait, ONNX storage is row-major.
-             // data[d * rows + i] ?? No, let's verify standard YOLOv8 output.
-             // Usually it's [batch, channels, anchors].
-             // So for a specific anchor 'i', attributes are at data[0*rows + i], data[1*rows + i]...
              
              for (int c = 0; c < num_classes; ++c) {
                  float score = data[(4 + c) * rows + i];
@@ -125,19 +104,11 @@ std::vector<Prediction> Detector::_filter_predictions(const std::vector<float>& 
                  float w  = data[2 * rows + i];
                  float h  = data[3 * rows + i];
 
-                 int x = static_cast<int>((cx - w / 2) * img_size.width / img_width); // scaling if input != original
-                 int y = static_cast<int>((cy - h / 2) * img_size.height / img_height);
-                 // Note: if img_width/height are the model input size, and we resize original image to it.
-                 // We should scale bbox back to original image size.
-                 // Here `img_size` is original frame size.
-                 // cx, cy, w, h are usually in pixels of the defined input size (img_width, img_height).
-                 // So we scale by (original / input_dim).
-                 
                  float scale_x = (float)img_size.width / img_width;
                  float scale_y = (float)img_size.height / img_height;
                  
-                 x = (int)((cx - 0.5 * w) * scale_x);
-                 y = (int)((cy - 0.5 * h) * scale_y);
+                 int x = (int)((cx - 0.5 * w) * scale_x);
+                 int y = (int)((cy - 0.5 * h) * scale_y);
                  int width = (int)(w * scale_x);
                  int height = (int)(h * scale_y);
                  
@@ -147,36 +118,13 @@ std::vector<Prediction> Detector::_filter_predictions(const std::vector<float>& 
              }
         }
         
-        // NMS
         std::vector<int> indices;
-        cv::dnn::NMSBoxes(bboxes, scores, conf_threshold, 0.45f, indices);
+        cv::dnn::NMSBoxes(bboxes, scores, conf_threshold, constants::nms_threshold, indices);
         
         for (int idx : indices) {
             preds.push_back({bboxes[idx], classIds[idx], scores[idx]});
         }
-        
-    } else {
-        // Fallback for [1, N, 85] (YOLOv5 style sometimes)
-        // dimensions = N, rows = 85? No.
-        // If shape is [1, 25200, 85] -> dimensions=25200, rows=85.
-        // Handled differently.
-        // Let's assume YOLOv8 format for now as that's the modern default and likely context.
-        // If it's the other way around, we can add logic.
-        // But the previous implementation logic handled "rows" as detections.
-        
-        // Re-using previous logic structure roughly?
-        // Let's stick strictly to what ONNX usually delivers for YOLO.
-        // If the user's model is YOLOv5, it might be [1, N, 85].
-        
-        // Let's look at `test_cpp.cpp`. It didn't parse outputs, just printed them.
-        // We will assume YOLOv8 [1, 84, 8400] style or generic box.
-        
-        // WARNING: If this is the BoC_model from before, it might be Darknet converted.
-        // If it was Darknet, it likely has [N, 85] or similar.
-        // Let's implement a generic parser if possible or just the Transposed one common in v8/v5-export.
-        
-         // ... implementation for transposed (standard v8) above ...
-    }
+    } 
     
     return preds;
 }
@@ -189,7 +137,7 @@ void Detector::_sort_bboxes(std::vector<Prediction>& predictions, int threshold)
     });
 }
 
-cust::CircularList<std::string> Detector::detect(const cv::Mat& frame, std::vector<Prediction>* out_predictions) {
+cust::CircularList<types::ItemID> Detector::detect(const cv::Mat& frame, std::vector<Prediction>* out_predictions) {
     try {
         // 1. Preprocess
         cv::Mat blob = _preprocess_image(frame);
@@ -239,20 +187,19 @@ cust::CircularList<std::string> Detector::detect(const cv::Mat& frame, std::vect
             *out_predictions = predictions;
         }
         
-        cust::CircularList<std::string> detected_labels;
+        cust::CircularList<types::ItemID> detected_items;
         for (const auto& pred : predictions) {
-            std::string label = std::to_string(pred.classId) + " (score: " + cv::format("%.2f", pred.confidence) + ")";
-            detected_labels.add(label);
+            detected_items.add(static_cast<types::ItemID>(pred.classId));
         }
         
-        return detected_labels;
+        return detected_items;
         
     } catch (const Ort::Exception& e) {
         std::cerr << "[ERROR] ONNX Runtime exception in detect: " << e.what() << std::endl;
-        return cust::CircularList<std::string>();
+        return cust::CircularList<types::ItemID>();
     } catch (const cv::Exception& e) {
         std::cerr << "[ERROR] OpenCV exception in detect: " << e.what() << std::endl;
-        return cust::CircularList<std::string>();
+        return cust::CircularList<types::ItemID>();
     }
 }
 

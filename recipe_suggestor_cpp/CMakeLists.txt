@@ -68,9 +68,11 @@ add_executable(pipeline_test tests/pipeline_test.cpp
     src/pipeline/nodes/recipe_suggestor.cpp
     src/utils.cpp)
 target_link_libraries(pipeline_test PRIVATE ${OpenCV_LIBS} ${ONNXRUNTIME_LIB} ${X11_LIBRARIES})
+add_executable(trie_test tests/trie_test.cpp src/data_structures/trie.cpp)
+target_link_libraries(trie_test PRIVATE ${OpenCV_LIBS} ${ONNXRUNTIME_LIB})
 
 # Copy ONNX Runtime lib to build directory for runtime finding
-foreach(TARGET_NAME detector_test boc_test floor_test capturer_test router_test pipeline_test)
+foreach(TARGET_NAME detector_test boc_test floor_test capturer_test router_test pipeline_test trie_test)
     add_custom_command(TARGET ${TARGET_NAME} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
         ${ORT_LIB_DIR}/libonnxruntime.so.1.16.3 $<TARGET_FILE_DIR:${TARGET_NAME}>)
