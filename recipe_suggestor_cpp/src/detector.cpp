@@ -1,4 +1,5 @@
 #include "data_structures/circular_list.hpp"
+#include "types.hpp"
 #include "detector.hpp"
 #include <iostream>
 #include <cmath>
@@ -141,7 +142,7 @@ void Detector::_sort_bboxes(std::vector<Prediction>& predictions, int threshold)
     });
 }
 
-cust::CircularList<types::ItemID> Detector::detect(const cv::Mat& frame, std::vector<Prediction>* out_predictions) {
+cust::CircularList<types::ConsumableID> Detector::detect(const cv::Mat& frame, std::vector<Prediction>* out_predictions) {
     try {
         // 1. Preprocess
         cv::Mat blob = _preprocess_image(frame);
@@ -239,27 +240,27 @@ cust::CircularList<types::ItemID> Detector::detect(const cv::Mat& frame, std::ve
         std::vector<Prediction> predictions = _filter_predictions(outputData, outputShape, frame.size());
         
         // Sort
-        _sort_bboxes(predictions);
+        _sort_bboxes(predictions); // TO BE TESTED
         
-        if (out_predictions) {
-            *out_predictions = predictions;
-        }
+        if (out_predictions) *out_predictions = predictions;
         
-        cust::CircularList<types::ItemID> detected_items;
+        cust::CircularList<types::ConsumableID> detected_items;
         for (const auto& pred : predictions) {
-            detected_items.add(static_cast<types::ItemID>(pred.classId));
+            detected_items.add(static_cast<types::ConsumableID>(pred.classId));
         }
         
         return detected_items;
         
     } catch (const Ort::Exception& e) {
         std::cerr << "[ERROR] ONNX Runtime exception in detect: " << e.what() << std::endl;
-        return cust::CircularList<types::ItemID>();
+        return cust::CircularList<types::ConsumableID>();
     } catch (const cv::Exception& e) {
         std::cerr << "[ERROR] OpenCV exception in detect: " << e.what() << std::endl;
-        return cust::CircularList<types::ItemID>();
+        return cust::CircularList<types::ConsumableID>();
     }
 }
+
+map<types::ConsumableID> detect_floor(const cv::Mat& frame, std::vector<Prediction>* out_predictions) {} // placeholder for inheritance
 
 cv::Mat Detector::visualize_detections(const cv::Mat& frame, const std::vector<Prediction>& predictions, const std::vector<std::string>& class_names) {
     cv::Mat vis_image = frame.clone();

@@ -31,4 +31,11 @@ private:
     FloorDetector* floor_detector = nullptr;
     BoCDetector* boc_detector = nullptr;
     RecipeSuggestor* suggestor = nullptr;
+
+    // Pipeline Nodes functions
+    ScreenCapture* frame_node();
+    void router_node(ScreenCapture* source_img, ScreenCapture* floor_img, ScreenCapture* boc_img);
+    std::map<types::ItemID, types::Quantity> floor_node(cv::Mat& floor_mat);
+    cust::CircularList<types::ItemID> boc_node(cv::Mat& boc_mat);
+    // TODO: recipe suggestor and Trie integration
 };

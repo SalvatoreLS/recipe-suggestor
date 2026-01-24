@@ -24,4 +24,7 @@ namespace constants {
 
     // Trie constants
     inline constexpr int max_elements_rank = 15;
+
+    // Processing Queue
+    inline constexpr std::size_t queue_max_size = 10;
 }
