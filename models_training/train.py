@@ -56,32 +56,37 @@ def download_dataset():
 
 def train_and_export():
     try:
-        # 1. Download Dataset
         data_path = download_dataset()
         print(f"Dataset data.yaml path: {data_path}")
-
-        # 2. Load a model
-        # Using yolov8n.pt (Nano) for speed/size. 
+        
+        # Load base model
         model = YOLO('yolov8n.pt') 
-
-        # 3. Train the model
+        
+        # Train the model
         print("Starting training...")
         results = model.train(data=data_path, epochs=EPOCHS, imgsz=IMG_SIZE, patience=PATIENCE)
-
-        # 4. Export the model
-        print("Exporting model to ONNX...")
-        # opset=12 is widely compatible with OpenCV and DJL (ONNX Runtime)
-        success_onnx = model.export(format='onnx', opset=12, simplify=True, dynamic=False)
         
-        print("Exporting model to TorchScript...")
-        success_torch = model.export(format='torchscript')
-
+        trained_model = YOLO('runs/detect/train/weights/best.pt') 
+        
+        # Test it first
+        print("Testing trained model...")
+        test_results = trained_model.predict('test_images/C00022_png.rf.46e3ea99a19b92bc75b7e4bd96ce5cc2.jpg', conf=0.25)
+        print(f"Detections: {len(test_results[0].boxes)}")
+        
+        # Export the model
+        print("Exporting model to ONNX...")
+        success_onnx = trained_model.export(format='onnx', opset=12, simplify=True, dynamic=False)
+        
         print(f"\nExport complete.")
         print(f"ONNX Model: {success_onnx}")
-        print(f"TorchScript Model: {success_torch}")
-
+        
+        # Copy to project
+        import shutil
+        shutil.copy(success_onnx, '../recipe_suggestor_cpp/resources/models/best.onnx')
+        print("Copied to ../recipe_suggestor_cpp/resources/models/best.onnx")
+        
     except Exception as e:
-        print(f"An error occurred during training pipeline: {e}")
+        print(f"An error occurred: {e}")
         sys.exit(1)
 
 if __name__ == '__main__':

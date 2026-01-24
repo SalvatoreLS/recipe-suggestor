@@ -5,6 +5,7 @@
 Thumbs.db
 ISSUES.md
 TODO.md
+.cache/
 
 # Editors / IDEs
 .idea/
@@ -56,10 +57,13 @@ recipe_suggestor_cpp/build/
 recipe_suggestor_cpp/libtorch/
 recipe_suggestor_cpp/outputs/
 recipe_suggestor_cpp/lib
+recipe_suggestor_cpp/resources/test_images/
 
 # Models / Data / Training
 models_training/runs/
 models_training/lib/
+models_training/outputs
+models_training/test_images
 models_training/BoC---TBOI*
 yolov8n.pt
 cp.txt
