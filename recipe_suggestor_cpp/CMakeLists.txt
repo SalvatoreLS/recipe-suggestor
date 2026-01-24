@@ -5,6 +5,9 @@ project(RecipeSuggestorCPP LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Debug
+# add_compile_definitions(DEBUG)
+
 # Find OpenCV
 find_package(OpenCV REQUIRED)
 find_package(X11 QUIET)

@@ -17,10 +17,6 @@ Detector::Detector(const std::string& model_path, int wid, int hei)
         
         session = Ort::Session(env, model_path.c_str(), sessionOptions);
         
-        // Resolve input/output names
-        // Note: For complex models, we might need to iterate over inputs/outputs. 
-        // Assuming single input/output for simplicity as per reference or YOLO style.
-        
         // Input
         size_t numInputNodes = session.GetInputCount();
         if (numInputNodes > 0) {
@@ -31,16 +27,12 @@ Detector::Detector(const std::string& model_path, int wid, int hei)
             auto tensorInfo = typeInfo.GetTensorTypeAndShapeInfo();
             inputNodeDims = tensorInfo.GetShape();
             
-            // Handle negative/dynamic dims if necessary, usually standard models have fixed input or -1 batch
-            // Use constructor wid/hei if dims are dynamic
+            // Handle negative/dynamic dims if necessary
             if (inputNodeDims.size() == 4) {
                  if (inputNodeDims[2] == -1 || inputNodeDims[3] == -1) {
                      inputNodeDims[2] = img_height;
                      inputNodeDims[3] = img_width;
                  }
-                 // Override with constructor args if different (resizing will happen in preprocess)
-                 // But ideally model expects specific size.
-                 // For now, trusting constructor args match model requirement or resize target.
             }
         }
 
@@ -52,21 +44,34 @@ Detector::Detector(const std::string& model_path, int wid, int hei)
         }
 
     } catch (const Ort::Exception& e) {
-        std::cerr << "[ERROR] ONNX Runtime exception: " << e.what() << std::endl;
+        std::cerr << "[ERROR] ONNX Runtime exception: " << e.what() << "\n";
         throw;
     }
 }
 
 cv::Mat Detector::_preprocess_image(const cv::Mat& frame) {
     cv::Mat blob;
-    // YOLO typically expects RGB, normalized 0-1.
-    // blobFromImage handles resizing, swapping BGR->RGB (if swapRB=true), and scaling.
-    cv::dnn::blobFromImage(frame, blob,
-        constants::pixel_scale,
+    cv::dnn::blobFromImage(
+        frame,                          // input image (source)
+        blob,                           // output blob (destination)
+        constants::pixel_scale,         // scale factor (in constants.hpp)
         cv::Size(img_width, img_height),
         cv::Scalar(0, 0, 0),
-        true, // swapRB
-        false); // crop
+        true,                           // swapRB (BGR->RGB)
+        false                           // crop
+    );
+
+    #if defined(DEBUG)
+    std::cout << "[DEBUG from _preprocess_image] Preprocessed image to blob." << std::endl;
+    std::cout << "Blob shape: [" << blob.size[0] << ", " 
+              << blob.size[1] << ", " 
+              << blob.size[2] << ", " 
+              << blob.size[3] << "]" << std::endl;
+    std::cout << "Blob value range: [" 
+              << *std::min_element(blob.begin<float>(), blob.end<float>()) << ", "
+              << *std::max_element(blob.begin<float>(), blob.end<float>()) << "]" << std::endl;
+    #endif
+
     return blob;
 }
 
@@ -76,8 +81,7 @@ std::vector<Prediction> Detector::_filter_predictions(const std::vector<float>& 
 
     int64_t dimensions = shape[1];
     int64_t rows = shape[2];
-    
-    // Check for YOLOv8 transposed output [1, 4+classes, N]
+        
     if (dimensions < rows && dimensions > 4) {
         int num_classes = dimensions - 4;
         const float* data = output.data();
@@ -150,7 +154,7 @@ cust::CircularList<types::ItemID> Detector::detect(const cv::Mat& frame, std::ve
             memcpy(inputTensorValues.data(), blob.ptr<float>(), inputTensorSize * sizeof(float));
         } else {
              // Fallback
-             std::cerr << "[WARN] Blob not continuous, copy might fail or be slow." << std::endl;
+             std::cerr << "[WARN] Blob not continuous, copy might fail or be slow.\n";
              // clone to make continuous
              cv::Mat cont = blob.clone();
              memcpy(inputTensorValues.data(), cont.ptr<float>(), inputTensorSize * sizeof(float));
@@ -175,9 +179,63 @@ cust::CircularList<types::ItemID> Detector::detect(const cv::Mat& frame, std::ve
         auto outputInfo = outputTensors[0].GetTensorTypeAndShapeInfo();
         std::vector<int64_t> outputShape = outputInfo.GetShape();
         size_t outputCount = outputInfo.GetElementCount();
+
+        #if defined(DEBUG)
+        std::cout << "\n=== DEBUG INFO ===" << std::endl;
+        std::cout << "Output shape: [";
+        for (size_t i = 0; i < outputShape.size(); i++) {
+            std::cout << outputShape[i];
+            if (i < outputShape.size() - 1) std::cout << ", ";
+        }
+        std::cout << "]" << std::endl;
+        std::cout << "Total elements: " << outputCount << std::endl;
+        std::cout << "First 20 output values: ";
+        for (int i = 0; i < std::min(20, (int)outputCount); i++) {
+            std::cout << floatArr[i] << " ";
+        }
+        std::cout << std::endl;
+
+        // Check max confidence across all predictions
+        if (outputShape.size() == 3) {
+            int64_t dimensions = outputShape[1];
+            int64_t rows = outputShape[2];
+            float max_conf_found = 0.0f;
+            
+            if (dimensions < rows) { // YOLOv8 format
+                int num_classes = dimensions - 4;
+                for (int i = 0; i < rows; i++) {
+                    for (int c = 0; c < num_classes; c++) {
+                        float score = floatArr[(4 + c) * rows + i];
+                        max_conf_found = std::max(max_conf_found, score);
+                    }
+                }
+            }
+            std::cout << "Max confidence found in output: " << max_conf_found << std::endl;
+        }
+        std::cout << "==================\n" << std::endl;
+        #endif
         
         std::vector<float> outputData(floatArr, floatArr + outputCount);
-        
+
+        #ifdef DEBUG
+        std::cout << "\n=== DETAILED OUTPUT ANALYSIS ===" << std::endl;
+        int64_t dim1 = outputShape[1];  // 25
+        int64_t dim2 = outputShape[2];  // 8400
+
+        // Check first detection's all 25 values
+        std::cout << "First detection (all 25 channels):" << std::endl;
+        for (int c = 0; c < dim1; c++) {
+            std::cout << "  Channel " << c << ": " << floatArr[c * dim2 + 0] << std::endl;
+        }
+
+        // Check if confidences are in different positions
+        std::cout << "\nChecking detection at index 100:" << std::endl;
+        for (int c = 0; c < dim1; c++) {
+            std::cout << "  Channel " << c << ": " << floatArr[c * dim2 + 100] << std::endl;
+        }
+        std::cout << "==================\n" << std::endl;
+        #endif
+
         std::vector<Prediction> predictions = _filter_predictions(outputData, outputShape, frame.size());
         
         // Sort

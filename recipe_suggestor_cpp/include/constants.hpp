@@ -2,9 +2,17 @@
 
 namespace constants {
 
+    // FloorDetector constants
+    // TODO
+
+    // BoCDetector constants
+    // TODO
+
+    // TODO: define two sets of thresholds for the two detectors (different requirements)
+
     // Detector constants
     inline constexpr float default_conf_threshold = 0.5f;
-    inline constexpr float nms_threshold = 0.45f;
+    inline constexpr float nms_threshold = 0.1f;
     inline constexpr int sort_threshold = 20;
     inline constexpr float pixel_scale = 1.0f / 255.0f;
     inline constexpr int intra_op_num_threads = 1;
