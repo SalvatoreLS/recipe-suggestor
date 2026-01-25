@@ -22,13 +22,12 @@ int main() {
     router.route(source, &floor_img, &boc_img);
     
     std::cout << "BoC Image: " << boc_img.width << "x" << boc_img.height << std::endl;
-    std::cout << "Floor Image: " << floor_img.width << "x" << floor_img.height << std::endl; // Floor not implemented yet fully
+    std::cout << "Floor Image: " << floor_img.width << "x" << floor_img.height << std::endl;
     
     // Cleanup
-    delete[] source->data;
+    // source->data is deleted by source's destructor
     delete source;
-    if (boc_img.data) delete[] boc_img.data;
-    if (floor_img.data) delete[] floor_img.data;
+    // boc_img.data and floor_img.data are deleted by their destructors when they go out of scope
     
     return 0;
 }

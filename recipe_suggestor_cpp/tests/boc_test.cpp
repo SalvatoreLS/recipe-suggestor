@@ -6,9 +6,9 @@
 namespace fs = std::filesystem;
 
 int main() {
-    std::string model_path = "resources/models/best.onnx";
-    std::string image_path = "resources/test_images/test1.jpg";
-    std::string output_path = "outputs/boc_test_result.jpg";
+    std::string model_path = "../resources/models/best.onnx";
+    std::string image_path = "../resources/test_images/C00144_png.rf.a60cb305b62d17bb303017d841b5c12b.jpg";
+    std::string output_path = "../outputs/boc_test_result.jpg";
 
     if (!fs::exists(model_path)) {
         std::cerr << "Model not found: " << model_path << std::endl;
