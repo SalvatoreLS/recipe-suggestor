@@ -1,51 +1,6 @@
 #include "pipeline/pipeline.hpp"
 #include <iostream>
-#include <sys/types.h>
-#include <thread>
-#include <future>
-#include <map>
-#include <optional>
-#include "data_structures/circular_list.hpp"
-#include "types.hpp"
-#include "utils.hpp"
-#include <opencv2/opencv.hpp>
-
-
-/*
-PIPELINE MESSAGES:
-// Frame capturing : None           ==>   ScreenCapture
-// Router          : ScreenCapture  ==>   [ ScreenCapture, ScreenCapture ]
-// [ PROCESS FRAMES ScreenCapture => cv::Mat ]
-// BOCDetector     : ScreenCapture  ==>   cust::CircularList<types::ConsumableID>
-// FloorDetector   : ScreenCapture  ==>   map<types::ConsumableID>
-// RecipeSuggestor : [ cust::CircularList<types::ConsumableID>, unordered_map<types::ConsumableID> ] => TBD
-*/
-
-// PIPELINE NODES ==================================================
-
-std::optional<ScreenCapture*> Pipeline::frame_node() {
-    // TODO: ADD PARALLELISM
-    ScreenCapture* frame = this->capturer->capture_screen();
-    if (!frame) return std::nullopt;
-    return frame;
-}
-
-void router_node(ScreenCapture* source_img, ScreenCapture* floor_img, ScreenCapture* boc_img) {
-    // TODO: ADD PARALLELISM
-    this->router->route(source_img, floor_img, boc_img);
-}
-
-std::map<types::ItemID, types::Quantity> Pipeline::floor_node(cv::Mat& floor_mat) {
-    // TODO: ADD PARALLELISM
-    return this->floor_detector->detect_floor(floor_mat);
-}
-
-cust::CircularList<types::ItemID> boc_node(cv::Mat& boc_mat) {
-    // TODO: ADD PARALLELISM
-    return this->boc_detector->detect(boc_mat);
-}
-
-// =================================================================
+#include <chrono>
 
 Pipeline::Pipeline(std::pair<int, int> boc_shape, std::pair<int, int> floor_shape)
     : boc_shape_(boc_shape), floor_shape_(floor_shape) {
@@ -53,13 +8,7 @@ Pipeline::Pipeline(std::pair<int, int> boc_shape, std::pair<int, int> floor_shap
 }
 
 void Pipeline::initialize() {
-    if (this->is_running()) {
-        std::cout << "[Pipeline] Trying to initialize when pipeline is running\n";
-        return;
-    }
-
-    if (this->is_initialized()) {
-        std::cout << "[Pipeline] Already initialized.\n";
+    if (this->is_running() || this->is_initialized()) {
         return;
     }
     
@@ -69,89 +18,116 @@ void Pipeline::initialize() {
     this->capturer = new FrameCapturer();
     this->router = new Router();
     this->floor_detector = new FloorDetector(model_path, floor_shape_.first, floor_shape_.second);
-    this->boc_detector = new BoCDetector(model_path, boc_shape_.first, boc_shape_.second);
+    this->b_detector = new BoCDetector(model_path, boc_shape_.first, boc_shape_.second);
     this->suggestor = new RecipeSuggestor();
 
     std::cout << "[Pipeline] Initialized.\n";
     this->initialized = true;
 }
 
-bool Pipeline::is_initialized() { return this->initialized; }
+// Workers (Nodes) ==================================================
 
-void Pipeline::run() {
-    if (this->is_running()) {
-        std::cout << "[Pipeline] Already running.\n";
-        return;
-    }
-
-    if (!this->is_initialized()) {
-        std::cout << "[Pipeline] Trying to run pipeline before initialization.\n";
-        return;
-    }
-
-    this->running = true;
-    std::cout << "[Pipeline] Running...\n";
-
-    // Structures for detections
-    cust::CircularList<types::ItemID> boc;
-    std::map<types::ItemID, types::Quantity> floor_obj; // (id, quantity)
-    
+void Pipeline::capture_worker() {
     while (this->is_running()) {
-        ++this->frame_count;
-        std::cout << "[Pipeline] Processing frame " << this->frame_count << "\n";
-
-        // Capture frame ==========================================
-
-        std::optional<ScreenCapture*> curr_frame = this->frame_node();
-        if (!curr_frame) continue;
-
-        // ========================================================
-
-        // Route frame ============================================
-        
-        ScreenCapture floor_img = {nullptr, 0, 0};
-        ScreenCapture boc_img = {nullptr, 0, 0};
-
-        this->router_node(curr_frame, &floor_img, &boc_img);
-
-        // ========================================================
-
-        // Detect Floor ===========================================
-
-        cust::CircularList<types::ConsumableID> floor_obj; // TODO: redefine detect method in floor detector to make it return data as a map
-                                                     // (call Detector::detect() and convert)
-
-                                                     // TODO: define an order for CircularList and always return items using the same criteria (rotate till correct before return)
-    
-        if (floor_img.data) {
-            cv::Mat floor_mat = screen_capture_to_mat(floor_img);
-            if (!floor_mat.empty()) floor_obj = this->floor_node(floor_mat);
+        ScreenCapture* frame = this->capturer->capture_screen();
+        if (frame) {
+            frame_queue.push(frame);
+        } else {
+            frame_queue.push(std::nullopt); // Poison pill
+            break;
         }
-
-        // ========================================================
-
-        // Detect BoC =============================================
-
-        cust::CircularList<types::ConsumableID> boc_obj;
-        if (boc_img.data) {
-            cv::Mat boc_mat = screen_capture_to_mat(boc_img);
-            if (!boc_mat.empty()) boc_obj = this->boc_node(boc_mat);
-        }
-
-        // ========================================================
-        
-        // Retrive suggestions ====================================
-        
-        // TODO: define a data structure for the suggestions (Trie + ranking (??))
-
-        this->suggestor->suggest(boc, floor_obj);
-
-        // ========================================================
-
-        delete curr_frame;
     }
 }
 
+void Pipeline::router_worker() {
+    while (true) {
+        auto msg = frame_queue.pop();
+        if (!msg) {
+            floor_image_queue.push(std::nullopt);
+            boc_image_queue.push(std::nullopt);
+            break;
+        }
+
+        ScreenCapture* source = *msg;
+        ScreenCapture* floor_img = new ScreenCapture{nullptr, 0, 0};
+        ScreenCapture* boc_img = new ScreenCapture{nullptr, 0, 0};
+
+        this->router->route(source, floor_img, boc_img);
+
+        floor_image_queue.push(floor_img);
+        boc_image_queue.push(boc_img);
+
+        delete source;
+    }
+}
+
+void Pipeline::floor_worker() {
+    while (true) {
+        auto msg = floor_image_queue.pop();
+        if (!msg) break;
+
+        ScreenCapture* img = *msg;
+        if (img && img->data) {
+            cv::Mat mat = screen_capture_to_mat(*img);
+            if (!mat.empty()) {
+                auto results = this->floor_detector->detect_floor(mat);
+                std::lock_guard<std::mutex> lock(results_mtx);
+                this->shared_floor_obj = std::move(results);
+            }
+        }
+        delete img;
+    }
+}
+
+void Pipeline::boc_worker() {
+    while (true) {
+        auto msg = boc_image_queue.pop();
+        if (!msg) break;
+
+        ScreenCapture* img = *msg;
+        if (img && img->data) {
+            cv::Mat mat = screen_capture_to_mat(*img);
+            if (!mat.empty()) {
+                auto results = this->b_detector->detect(mat);
+                std::lock_guard<std::mutex> lock(results_mtx);
+                this->shared_boc = std::move(results);
+            }
+        }
+        delete img;
+    }
+}
+
+void Pipeline::suggestor_worker() {
+    while (this->is_running()) {
+        {
+            std::lock_guard<std::mutex> lock(results_mtx);
+            this->suggestor->suggest(this->shared_boc, this->shared_floor_obj);
+        }
+        std::this_thread::sleep_for(std::chrono::milliseconds(33));
+    }
+}
+
+// Execution Control ===============================================
+
+void Pipeline::run() {
+    if (this->is_running() || !this->is_initialized()) return;
+
+    this->running = true;
+    std::cout << "[Pipeline] Running Parallelized...\n";
+
+    std::vector<std::thread> workers;
+    workers.emplace_back(&Pipeline::capture_worker, this);
+    workers.emplace_back(&Pipeline::router_worker, this);
+    workers.emplace_back(&Pipeline::floor_worker, this);
+    workers.emplace_back(&Pipeline::boc_worker, this);
+    workers.emplace_back(&Pipeline::suggestor_worker, this);
+
+    for (auto& t : workers) {
+        if (t.joinable()) t.join();
+    }
+}
+
+bool Pipeline::is_initialized() { return this->initialized; }
 bool Pipeline::is_running() { return this->running; }
 
 Pipeline::~Pipeline() {
@@ -159,6 +135,6 @@ Pipeline::~Pipeline() {
     delete this->capturer;
     delete this->router;
     delete this->floor_detector;
-    delete this->boc_detector;
+    delete this->b_detector;
     delete this->suggestor;
 }
