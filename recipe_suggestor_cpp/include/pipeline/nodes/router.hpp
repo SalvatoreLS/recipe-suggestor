@@ -4,6 +4,8 @@
 #include <utility>
 #include <thread>
 #include "utils.hpp"
+#include <cstring>
+#include <algorithm>
 
 class Router {
 
@@ -14,6 +16,7 @@ public:
 private:
     void process_boc(ScreenCapture* source, ScreenCapture* dest);
     void process_floor(ScreenCapture* source, ScreenCapture* dest);
+    ScreenCapture* coverRegion(const ScreenCapture* img, uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);
 };
 
 #endif // ROUTER_HPP

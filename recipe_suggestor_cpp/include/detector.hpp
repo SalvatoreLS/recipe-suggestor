@@ -25,7 +25,7 @@ public:
     // Visualization helper
     cv::Mat visualize_detections(const cv::Mat& frame, const std::vector<Prediction>& predictions, const std::vector<std::string>& class_names);
 
-private:
+protected:
     int img_width;
     int img_height;
     

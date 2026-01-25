@@ -260,7 +260,7 @@ cust::CircularList<types::ConsumableID> Detector::detect(const cv::Mat& frame, s
     }
 }
 
-map<types::ConsumableID> detect_floor(const cv::Mat& frame, std::vector<Prediction>* out_predictions) {} // placeholder for inheritance
+
 
 cv::Mat Detector::visualize_detections(const cv::Mat& frame, const std::vector<Prediction>& predictions, const std::vector<std::string>& class_names) {
     cv::Mat vis_image = frame.clone();

@@ -1,6 +1,8 @@
 #include "pipeline/nodes/floor_detector.hpp"
 
-map<types::ConsumableID> FloorDetector::detect_floor(const cv::Mat& frame, std::vector<Prediction>* out_predictions) {
+#include <map>
+
+std::map<types::ConsumableID, types::Quantity> FloorDetector::detect_floor(const cv::Mat& frame, std::vector<Prediction>* out_predictions) {
     try {
         // 1. Preprocess
         cv::Mat blob = _preprocess_image(frame);
@@ -99,16 +101,16 @@ map<types::ConsumableID> FloorDetector::detect_floor(const cv::Mat& frame, std::
         
         if (out_predictions) *out_predictions = predictions;
         
-        map<types::ConsumableID> detected_items;
+        std::map<types::ConsumableID, types::Quantity> detected_items;
         for (const auto& pred : predictions) detected_items[pred.classId]++;
         
         return detected_items;
         
     } catch (const Ort::Exception& e) {
         std::cerr << "[ERROR] ONNX Runtime exception in detect: " << e.what() << std::endl;
-        return map<types::ConsumableID>();
+        return std::map<types::ConsumableID, types::Quantity>();
     } catch (const cv::Exception& e) {
         std::cerr << "[ERROR] OpenCV exception in detect: " << e.what() << std::endl;
-        return map<types::ConsumableID>();
+        return std::map<types::ConsumableID, types::Quantity>();
     }
 }
