@@ -67,6 +67,7 @@ add_executable(pipeline_test tests/pipeline_test.cpp
     src/pipeline/pipeline.cpp 
     src/pipeline/nodes/frame_capturer.cpp 
     src/pipeline/nodes/router.cpp 
+    src/pipeline/nodes/floor_detector.cpp
     src/detector.cpp 
     src/pipeline/nodes/recipe_suggestor.cpp
     src/utils.cpp)

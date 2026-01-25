@@ -1,14 +1,8 @@
 #pragma once
 
+#include <sys/types.h>
+
 namespace constants {
-
-    // FloorDetector constants
-    // TODO
-
-    // BoCDetector constants
-    // TODO
-
-    // TODO: define two sets of thresholds for the two detectors (different requirements)
 
     // Detector constants
     inline constexpr float default_conf_threshold = 0.5f;
@@ -18,13 +12,17 @@ namespace constants {
     inline constexpr int intra_op_num_threads = 1;
 
     // Router constants
-    inline constexpr double crop_width_factor = 0.35;
-    inline constexpr double crop_height_factor = 0.18;
+    inline constexpr double boc_crop_width_factor = 0.35;
+    inline constexpr double boc_crop_height_factor = 0.18;
     inline constexpr double crop_start_x_factor = 0.97;
+    inline constexpr double left_section_x_factor = 0.0;
+    inline constexpr double left_section_y_factor = 0.13;
+    inline constexpr double left_crop_width_factor = 0.13;
+    inline constexpr double left_crop_height_factor = 0.7;
 
     // Trie constants
     inline constexpr int max_elements_rank = 15;
 
     // Processing Queue
-    inline constexpr std::size_t queue_max_size = 10;
+    inline constexpr u_int16_t queue_max_size = 10;
 }
