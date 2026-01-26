@@ -1,6 +1,7 @@
 #pragma once
 
 #include <sys/types.h>
+#include <string>
 
 namespace constants {
 
@@ -25,4 +26,11 @@ namespace constants {
 
     // Processing Queue
     inline constexpr u_int16_t queue_max_size = 10;
+
+    // Image constants
+    inline constexpr u_int16_t img_width = 640;
+    inline constexpr u_int16_t img_height = 640;
+
+    // Fixed paths
+    inline constexpr const char* fixed_crafts_path = "resources/fixed.json";
 }

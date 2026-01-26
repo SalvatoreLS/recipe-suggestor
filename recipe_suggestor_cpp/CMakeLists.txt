@@ -36,7 +36,7 @@ list(REMOVE_ITEM SRC_FILES ${CMAKE_SOURCE_DIR}/src/pipeline/detector_torch.cpp)
 add_executable(${PROJECT_NAME} ${SRC_FILES})
 
 # Link libraries
-target_link_libraries(${PROJECT_NAME} PRIVATE ${OpenCV_LIBS} ${ONNXRUNTIME_LIB} ${X11_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${OpenCV_LIBS} ${ONNXRUNTIME_LIB} ${X11_LIBRARIES} crypto)
 
     # Copy ONNX Runtime lib to build directory for runtime finding
     add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
@@ -61,6 +61,9 @@ target_link_libraries(capturer_test PRIVATE ${OpenCV_LIBS} ${X11_LIBRARIES})
 
 add_executable(router_test tests/router_test.cpp src/pipeline/nodes/router.cpp src/utils.cpp)
 target_link_libraries(router_test PRIVATE ${OpenCV_LIBS})
+
+add_executable(bag_of_crafting_test tests/bag_of_crafting_test.cpp src/bag_of_crafting.cpp src/utils.cpp)
+target_link_libraries(bag_of_crafting_test PRIVATE ${OpenCV_LIBS} crypto)
 
 # For pipeline test
 add_executable(pipeline_test tests/pipeline_test.cpp 

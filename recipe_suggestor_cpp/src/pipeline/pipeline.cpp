@@ -33,7 +33,7 @@ void Pipeline::capture_worker() {
         if (frame) {
             frame_queue.push(frame);
         } else {
-            frame_queue.push(std::nullopt); // Poison pill
+            frame_queue.push(std::nullopt); // It tells the consumers to stop (end of queue)
             break;
         }
     }
@@ -131,6 +131,7 @@ bool Pipeline::is_initialized() { return this->initialized; }
 bool Pipeline::is_running() { return this->running; }
 
 Pipeline::~Pipeline() {
+    this->initialized = false;
     this->running = false;
     delete this->capturer;
     delete this->router;

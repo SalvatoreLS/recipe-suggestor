@@ -4,6 +4,9 @@
 #include <sys/types.h>
 #include <string>
 #include <opencv2/opencv.hpp>
+#include <vector>
+#include <unordered_map>
+#include "types.hpp"
 
 
 struct ScreenCapture {
@@ -21,5 +24,7 @@ struct Consumable {
 
 Consumable get_object_from_id(u_int16_t id);
 cv::Mat screen_capture_to_mat(const ScreenCapture& capture);
+std::string serializeBag(std::vector<types::ConsumableID>& bag);
+std::unordered_map<std::string, types::ItemID> loadJsonToUnorderedMap(const std::string& jsonPath);
 
 #endif // UTILS_HPP

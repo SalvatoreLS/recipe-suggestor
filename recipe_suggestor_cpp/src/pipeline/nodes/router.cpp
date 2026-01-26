@@ -28,7 +28,7 @@ void Router::process_boc(ScreenCapture* source, ScreenCapture* dest) {
             int srcX = start_X + x;
             int srcY = start_Y + y;
             
-            // Calculate source and destination indices (assuming RGB format)
+            // Calculate source and destination indices
             int srcIndex = (srcY * source->width + srcX) * 3;
             int dstIndex = (y * crop_width + x) * 3;
             
@@ -41,7 +41,7 @@ void Router::process_boc(ScreenCapture* source, ScreenCapture* dest) {
 }
 
 void Router::process_floor(ScreenCapture* source, ScreenCapture* dest) {
-    // 1. Initialize destination (copy source properties and data)
+    // 1. Initialize destination
     dest->width = source->width;
     dest->height = source->height;
     

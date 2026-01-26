@@ -5,13 +5,14 @@
 int main() {
     Router router;
     
-    // Mock Source Image (100x100)
+    // Mock Source Image
     int w = 1920;
     int h = 1080;
     ScreenCapture* source = new ScreenCapture();
     source->width = w;
     source->height = h;
     source->data = new unsigned char[w * h * 3];
+
     // Fill with some data
     for(int i=0; i<w*h*3; ++i) source->data[i] = (unsigned char)(i % 255);
     
@@ -25,9 +26,7 @@ int main() {
     std::cout << "Floor Image: " << floor_img.width << "x" << floor_img.height << std::endl;
     
     // Cleanup
-    // source->data is deleted by source's destructor
     delete source;
-    // boc_img.data and floor_img.data are deleted by their destructors when they go out of scope
     
     return 0;
 }
