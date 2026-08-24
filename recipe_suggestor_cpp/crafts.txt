@@ -1,0 +1,18 @@
+SEED = B0VB L7FG
+key, red heart, soul heart, key, red heart, penny, penny, key = flat stone
+penny, key, key, red heart, soul heart, key, red heart, red heart = Libra
+
+SEED = LLEV H1JZ
+red heart, key, nickel, penny, penny, red heart, penny, red heart = Best Friend
+red heart, key, nickel, penny, penny, penny, penny, penny = safety pin
+penny, bomb, bomb, key, bomb, penny, penny, bomb = 3 dollar bill
+
+SEED = LSV2 S8CB
+key, penny, nickel, key, gold key, bomb, gold key, red heart = keeper's box
+gold key, red heart, bomb, penny, nickel, key, gold key, penny = magic scab
+key, bomb, penny, nickel, key, red heart, red heart, nickel = sharp straw
+red heart, nickel, key, bomb, penny, nickel, key, penny = tinytoma
+penny, red heart, penny, card, penny, bomb, penny, penny = the ladder
+penny, penny, penny, card, penny, bomb, penny, penny = anarchist cookbook
+penny, penny, penny, penny, card, penny, bomb, dime = dinner
+bomb, penny, soul heart, soul heart, bomb, penny, key, penny = tarot cloth

@@ -13,10 +13,16 @@ public:
     Router();
     void route(ScreenCapture* source_img, ScreenCapture* floor_img, ScreenCapture* boc_img); // update the provided object
 
+    // Region geometry, shared by the crop and the mask so they cannot diverge.
+    // Public so the ROI calibration tool can draw exactly what the pipeline uses.
+    cv::Rect boc_rect(int w, int h) const;
+    cv::Rect left_rect(int w, int h) const;
+
 private:
+
     void process_boc(ScreenCapture* source, ScreenCapture* dest);
     void process_floor(ScreenCapture* source, ScreenCapture* dest);
-    void cover_region_inplace(ScreenCapture* img, uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);
+    void cover_region_inplace(ScreenCapture* img, const cv::Rect& region);
 };
 
 #endif // ROUTER_HPP

@@ -17,8 +17,9 @@ public:
 
 
 private:
-    u_int16_t width;
-    u_int16_t height; // TODO: collect them when initializing the frame capturer
+    // Screen size sampled at construction; used to notice resolution changes.
+    u_int16_t width = 0;
+    u_int16_t height = 0;
 };
 
 #endif // FRAME_CAPTURER_CPP

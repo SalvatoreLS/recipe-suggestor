@@ -40,8 +40,18 @@ public:
 
     void initialize();
     bool is_initialized();
+
+    // run() spawns the workers and returns immediately; join() waits for them.
+    // Keeping them separate is what makes stop() callable from another thread
+    // (or from a signal handler) instead of the process only ever being killed.
     void run();
+    void join();
+    void stop();
     bool is_running();
+
+    void set_seed(const std::string& seed);
+    void set_start_seed(uint32_t seed);
+    void set_start_seeds(std::vector<uint32_t> seeds);
 
 private:
     // Config and state
@@ -49,7 +59,6 @@ private:
     std::pair<int, int> floor_shape_;
     std::atomic<bool> running{false};
     std::atomic<bool> initialized{false};
-    std::atomic<types::FrameCount> frame_count{0};
 
     // Processing queues 
     BoundedQueue<ScreenCapture*> frame_queue{constants::queue_max_size};
@@ -58,16 +67,22 @@ private:
 
     // Thread-safe shared results
     std::mutex results_mtx;
-    cust::CircularList<types::ItemID> shared_boc;
-    std::map<types::ItemID, types::Quantity> shared_floor_obj;
-    // TODO: Trie structure
+    cust::CircularList<types::ConsumableID> shared_boc;
+    std::map<types::ConsumableID, types::Quantity> shared_floor_obj;
 
     // Node objects
     FrameCapturer* capturer = nullptr;
     Router* router = nullptr;
     FloorDetector* floor_detector = nullptr;
     BoCDetector* b_detector = nullptr;
-    RecipeSuggestor* suggestor = nullptr; // TODO: implement this class correctly
+    RecipeSuggestor* suggestor = nullptr;
+
+    // Last state line printed by suggestor_worker, so an unchanged game state
+    // is not reprinted on every poll. Touched only by that one thread.
+    std::string last_state_line_;
+
+    // Worker threads, owned so that stop()/join() can reach them.
+    std::vector<std::thread> workers_;
 
     // Worker Threads
     void capture_worker();
@@ -76,8 +91,8 @@ private:
     void boc_worker();
     void suggestor_worker();
 
-    // Stop threads
-    void stop();
+    // Frees anything still sitting in the queues at shutdown.
+    void drain_queues();
 };
 
 #endif // PIPELINE_HPP

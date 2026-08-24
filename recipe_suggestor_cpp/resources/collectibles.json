@@ -1,0 +1,9430 @@
+{
+ "1": {
+  "name": "The Sad Onion",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "10": {
+  "name": "Halo of Flies",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "fly"
+  ]
+ },
+ "100": {
+  "name": "Little Steven",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "101": {
+  "name": "The Halo",
+  "pools": [
+   "angel",
+   "greedBoss",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive",
+   "angel"
+  ]
+ },
+ "102": {
+  "name": "Mom's Bottle of Pills",
+  "pools": [
+   "beggar",
+   "craneGame",
+   "demonBeggar",
+   "greedTreasure",
+   "momsChest",
+   "oldChest",
+   "shop",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "mom",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "103": {
+  "name": "The Common Cold",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "104": {
+  "name": "The Parasite",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "105": {
+  "name": "The D6",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 4,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "106": {
+  "name": "Mr. Mega",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "107": {
+  "name": "The Pinking Shears",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "108": {
+  "name": "The Wafer",
+  "pools": [
+   "angel",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "109": {
+  "name": "Money = Power",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "11": {
+  "name": "1up!",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret"
+  ],
+  "quality": 2,
+  "tags": [
+   "mushroom"
+  ]
+ },
+ "110": {
+  "name": "Mom's Contacts",
+  "pools": [
+   "greedTreasure",
+   "momsChest",
+   "oldChest",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "mom",
+   "offensive"
+  ]
+ },
+ "111": {
+  "name": "The Bean",
+  "pools": [
+   "beggar",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "112": {
+  "name": "Guardian Angel",
+  "pools": [
+   "angel",
+   "babyShop",
+   "greedAngel"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual"
+  ]
+ },
+ "113": {
+  "name": "Demon Baby",
+  "pools": [
+   "babyShop",
+   "devil",
+   "greedDevil",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "114": {
+  "name": "Mom's Knife",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "momsChest",
+   "oldChest",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "mom",
+   "offensive"
+  ]
+ },
+ "115": {
+  "name": "Ouija Board",
+  "pools": [
+   "devil",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "116": {
+  "name": "9 Volt",
+  "pools": [
+   "batteryBum",
+   "craneGame",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "battery",
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "117": {
+  "name": "Dead Bird",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "dead"
+  ]
+ },
+ "118": {
+  "name": "Brimstone",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 4,
+  "tags": [
+   "devil",
+   "summonable",
+   "offensive"
+  ]
+ },
+ "119": {
+  "name": "Blood Bag",
+  "pools": [
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "12": {
+  "name": "Magic Mushroom",
+  "pools": [
+   "greedBoss",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "mushroom",
+   "offensive"
+  ]
+ },
+ "120": {
+  "name": "Odd Mushroom",
+  "pools": [
+   "greedBoss",
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "mushroom",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "121": {
+  "name": "Odd Mushroom",
+  "pools": [
+   "greedBoss",
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "mushroom",
+   "offensive"
+  ]
+ },
+ "122": {
+  "name": "Whore of Babylon",
+  "pools": [
+   "demonBeggar",
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "123": {
+  "name": "Monster Manual",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "library",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "book",
+   "offensive"
+  ]
+ },
+ "124": {
+  "name": "Dead Sea Scrolls",
+  "pools": [
+   "angel",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "125": {
+  "name": "Bobby-Bomb",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "126": {
+  "name": "Razor Blade",
+  "pools": [
+   "curse",
+   "demonBeggar",
+   "greedCurse",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "127": {
+  "name": "Forget Me Now",
+  "pools": [
+   "demonBeggar",
+   "devil",
+   "greedSecret",
+   "secret",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "128": {
+  "name": "Forever Alone",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive",
+   "fly"
+  ]
+ },
+ "129": {
+  "name": "Bucket of Lard",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "13": {
+  "name": "The Virus",
+  "pools": [
+   "demonBeggar",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "syringe"
+  ]
+ },
+ "130": {
+  "name": "A Pony",
+  "pools": [],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "131": {
+  "name": "Bomb Bag",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "132": {
+  "name": "A Lump of Coal",
+  "pools": [
+   "greedBoss",
+   "greedDevil",
+   "greedTreasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "133": {
+  "name": "Guppy's Paw",
+  "pools": [
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "redChest"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr",
+   "dead",
+   "guppy"
+  ]
+ },
+ "134": {
+  "name": "Guppy's Tail",
+  "pools": [
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "redChest"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "dead",
+   "guppy",
+   "offensive"
+  ]
+ },
+ "135": {
+  "name": "IV Bag",
+  "pools": [
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "136": {
+  "name": "Best Friend",
+  "pools": [
+   "craneGame",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "137": {
+  "name": "Remote Detonator",
+  "pools": [
+   "bombBum",
+   "craneGame",
+   "greedTreasure",
+   "shop",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "138": {
+  "name": "Stigmata",
+  "pools": [
+   "greedAngel",
+   "greedTreasure",
+   "treasure",
+   "woodenChest"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "139": {
+  "name": "Mom's Purse",
+  "pools": [
+   "greedShop",
+   "momsChest",
+   "oldChest",
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "mom",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "14": {
+  "name": "Roid Rage",
+  "pools": [
+   "boss",
+   "demonBeggar",
+   "greedBoss",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "syringe",
+   "offensive"
+  ]
+ },
+ "140": {
+  "name": "Bob's Curse",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "redChest",
+   "rottenBeggar",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "bob",
+   "summonable",
+   "offensive"
+  ]
+ },
+ "141": {
+  "name": "Pageant Boy",
+  "pools": [
+   "boss"
+  ],
+  "quality": 0,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "142": {
+  "name": "Scapular",
+  "pools": [
+   "angel",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "angel"
+  ]
+ },
+ "143": {
+  "name": "Speed Ball",
+  "pools": [
+   "boss",
+   "demonBeggar",
+   "greedBoss",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "syringe",
+   "offensive"
+  ]
+ },
+ "144": {
+  "name": "Bum Friend",
+  "pools": [
+   "babyShop",
+   "beggar",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "145": {
+  "name": "Guppy's Head",
+  "pools": [
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "redChest"
+  ],
+  "quality": 3,
+  "tags": [
+   "dead",
+   "guppy",
+   "offensive"
+  ]
+ },
+ "146": {
+  "name": "Prayer Card",
+  "pools": [
+   "angel",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "147": {
+  "name": "Notched Axe",
+  "pools": [
+   "craneGame",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "148": {
+  "name": "Infestation",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "149": {
+  "name": "Ipecac",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "bob",
+   "summonable",
+   "offensive"
+  ]
+ },
+ "15": {
+  "name": "<3",
+  "pools": [
+   "greedBoss",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "150": {
+  "name": "Tough Love",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "151": {
+  "name": "The Mulligan",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "fly"
+  ]
+ },
+ "152": {
+  "name": "Technology 2",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "tech",
+   "offensive"
+  ]
+ },
+ "153": {
+  "name": "Mutant Spider",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "spider",
+   "offensive"
+  ]
+ },
+ "154": {
+  "name": "Chemical Peel",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "155": {
+  "name": "The Peeper",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "156": {
+  "name": "Habit",
+  "pools": [
+   "angel",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "nocantrip"
+  ]
+ },
+ "157": {
+  "name": "Bloody Lust",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "158": {
+  "name": "Crystal Ball",
+  "pools": [],
+  "quality": 3,
+  "tags": [
+   "offensive",
+   "stars",
+   "lazarussharedglobal"
+  ]
+ },
+ "159": {
+  "name": "Spirit of the Night",
+  "pools": [
+   "demonBeggar",
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "devil",
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "16": {
+  "name": "Raw Liver",
+  "pools": [
+   "greedBoss",
+   "greedSecret",
+   "secret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "160": {
+  "name": "Crack the Sky",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "161": {
+  "name": "Ankh",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "nocantrip",
+   "nochallenge"
+  ]
+ },
+ "162": {
+  "name": "Celtic Cross",
+  "pools": [
+   "angel",
+   "greedAngel",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "angel"
+  ]
+ },
+ "163": {
+  "name": "Ghost Baby",
+  "pools": [
+   "babyShop",
+   "devil",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "164": {
+  "name": "The Candle",
+  "pools": [
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "165": {
+  "name": "Cat-o-nine-tails",
+  "pools": [
+   "boss"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "166": {
+  "name": "D20",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "167": {
+  "name": "Harlequin Baby",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "168": {
+  "name": "Epic Fetus",
+  "pools": [
+   "greedSecret",
+   "secret"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "169": {
+  "name": "Polyphemus",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "17": {
+  "name": "Skeleton Key",
+  "pools": [
+   "greedSecret",
+   "secret",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "170": {
+  "name": "Daddy Longlegs",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "spider",
+   "offensive"
+  ]
+ },
+ "171": {
+  "name": "Spider Butt",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "spider",
+   "offensive"
+  ]
+ },
+ "172": {
+  "name": "Sacrificial Dagger",
+  "pools": [
+   "babyShop",
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "173": {
+  "name": "Mitre",
+  "pools": [
+   "angel",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "angel"
+  ]
+ },
+ "174": {
+  "name": "Rainbow Baby",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "baby",
+   "offensive"
+  ]
+ },
+ "175": {
+  "name": "Dad's Key",
+  "pools": [
+   "greedTreasure",
+   "keyMaster",
+   "oldChest",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "176": {
+  "name": "Stem Cells",
+  "pools": [
+   "boss",
+   "greedBoss",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "177": {
+  "name": "Portable Slot",
+  "pools": [
+   "beggar",
+   "shop",
+   "ultraSecret"
+  ],
+  "quality": 0,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "178": {
+  "name": "Holy Water",
+  "pools": [
+   "angel",
+   "greedAngel",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "179": {
+  "name": "Fate",
+  "pools": [
+   "goldenChest"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "18": {
+  "name": "A Dollar",
+  "pools": [],
+  "quality": 3,
+  "tags": [
+   "nocantrip"
+  ]
+ },
+ "180": {
+  "name": "The Black Bean",
+  "pools": [
+   "beggar",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "181": {
+  "name": "White Pony",
+  "pools": [],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "182": {
+  "name": "Sacred Heart",
+  "pools": [
+   "angel",
+   "greedAngel",
+   "ultraSecret"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "offensive",
+   "angel"
+  ]
+ },
+ "183": {
+  "name": "Tooth Picks",
+  "pools": [
+   "boss",
+   "greedBoss",
+   "woodenChest"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "184": {
+  "name": "Holy Grail",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "angel"
+  ]
+ },
+ "185": {
+  "name": "Dead Dove",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "angel"
+  ]
+ },
+ "186": {
+  "name": "Blood Rights",
+  "pools": [
+   "devil",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "187": {
+  "name": "Guppy's Hairball",
+  "pools": [
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "guppy",
+   "offensive"
+  ]
+ },
+ "188": {
+  "name": "Abel",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "summonable",
+   "baby",
+   "offensive"
+  ]
+ },
+ "189": {
+  "name": "SMB Super Fan",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "19": {
+  "name": "Boom!",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "190": {
+  "name": "Pyro",
+  "pools": [
+   "bombBum",
+   "greedSecret",
+   "secret",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "191": {
+  "name": "3 Dollar Bill",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "192": {
+  "name": "Telepathy For Dummies",
+  "pools": [
+   "greedTreasure",
+   "library",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "book",
+   "offensive"
+  ]
+ },
+ "193": {
+  "name": "MEAT!",
+  "pools": [
+   "boss",
+   "greedBoss",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "194": {
+  "name": "Magic 8 Ball",
+  "pools": [
+   "boss",
+   "craneGame",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars",
+   "lazarussharedglobal"
+  ]
+ },
+ "195": {
+  "name": "Mom's Coin Purse",
+  "pools": [
+   "beggar",
+   "boss",
+   "demonBeggar",
+   "greedBoss",
+   "momsChest",
+   "oldChest",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "mom",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "196": {
+  "name": "Squeezy",
+  "pools": [
+   "boss",
+   "craneGame",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "197": {
+  "name": "Jesus Juice",
+  "pools": [
+   "boss",
+   "greedAngel",
+   "greedBoss"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "198": {
+  "name": "Box",
+  "pools": [
+   "beggar",
+   "boss",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "199": {
+  "name": "Mom's Key",
+  "pools": [
+   "greedBoss",
+   "keyMaster",
+   "momsChest",
+   "oldChest",
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "mom",
+   "offensive"
+  ]
+ },
+ "2": {
+  "name": "The Inner Eye",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "20": {
+  "name": "Transcendence",
+  "pools": [
+   "greedSecret",
+   "secret"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "200": {
+  "name": "Mom's Eyeshadow",
+  "pools": [
+   "greedTreasure",
+   "momsChest",
+   "oldChest",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "mom",
+   "offensive"
+  ]
+ },
+ "201": {
+  "name": "Iron Bar",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "202": {
+  "name": "Midas' Touch",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "203": {
+  "name": "Humbleing Bundle",
+  "pools": [
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "204": {
+  "name": "Fanny Pack",
+  "pools": [
+   "beggar",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "205": {
+  "name": "Sharp Plug",
+  "pools": [
+   "batteryBum",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "nocantrip"
+  ]
+ },
+ "206": {
+  "name": "Guillotine",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "207": {
+  "name": "Ball of Bandages",
+  "pools": [
+   "babyShop",
+   "greedBoss"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "monstermanual"
+  ]
+ },
+ "208": {
+  "name": "Champion Belt",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "shop",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "209": {
+  "name": "Butt Bombs",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "shellGame",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "poop",
+   "summonable",
+   "offensive"
+  ]
+ },
+ "21": {
+  "name": "The Compass",
+  "pools": [
+   "beggar",
+   "craneGame",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "lazarussharedglobal",
+   "nogreed"
+  ]
+ },
+ "210": {
+  "name": "Gnawed Leaf",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "211": {
+  "name": "Spiderbaby",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "spider"
+  ]
+ },
+ "212": {
+  "name": "Guppy's Collar",
+  "pools": [
+   "craneGame",
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "redChest"
+  ],
+  "quality": 2,
+  "tags": [
+   "guppy"
+  ]
+ },
+ "213": {
+  "name": "Lost Contact",
+  "pools": [
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "214": {
+  "name": "Anemic",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "215": {
+  "name": "Goat Head",
+  "pools": [
+   "curse",
+   "devil"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "lazarussharedglobal"
+  ]
+ },
+ "216": {
+  "name": "Ceremonial Robes",
+  "pools": [
+   "curse",
+   "demonBeggar",
+   "devil",
+   "greedCurse",
+   "greedDevil"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "217": {
+  "name": "Mom's Wig",
+  "pools": [
+   "greedTreasure",
+   "momsChest",
+   "oldChest",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "mom",
+   "offensive"
+  ]
+ },
+ "218": {
+  "name": "Placenta",
+  "pools": [
+   "boss"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "219": {
+  "name": "Old Bandage",
+  "pools": [
+   "boss"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "22": {
+  "name": "Lunch",
+  "pools": [
+   "beggar",
+   "boss",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "nocantrip",
+   "food"
+  ]
+ },
+ "220": {
+  "name": "Sad Bombs",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "221": {
+  "name": "Rubber Cement",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "222": {
+  "name": "Anti-Gravity",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "223": {
+  "name": "Pyromaniac",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "224": {
+  "name": "Cricket's Body",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "dead",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "225": {
+  "name": "Gimpy",
+  "pools": [
+   "curse",
+   "demonBeggar",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "226": {
+  "name": "Black Lotus",
+  "pools": [
+   "greedSecret",
+   "greedTreasure",
+   "secret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "227": {
+  "name": "Piggy Bank",
+  "pools": [
+   "craneGame",
+   "shop",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "228": {
+  "name": "Mom's Perfume",
+  "pools": [
+   "greedTreasure",
+   "momsChest",
+   "oldChest",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "mom",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "229": {
+  "name": "Monstro's Lung",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "23": {
+  "name": "Dinner",
+  "pools": [
+   "beggar",
+   "boss",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "nocantrip",
+   "food"
+  ]
+ },
+ "230": {
+  "name": "Abaddon",
+  "pools": [
+   "demonBeggar",
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "devil",
+   "summonable",
+   "offensive"
+  ]
+ },
+ "231": {
+  "name": "Ball of Tar",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "232": {
+  "name": "Stop Watch",
+  "pools": [
+   "craneGame",
+   "shop"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "233": {
+  "name": "Tiny Planet",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "234": {
+  "name": "Infestation 2",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "spider",
+   "offensive"
+  ]
+ },
+ "236": {
+  "name": "E. Coli",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "poop",
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "237": {
+  "name": "Death's Touch",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "238": {
+  "name": "Key Piece 1",
+  "pools": [],
+  "quality": 0,
+  "tags": [
+   "uniquefamiliar",
+   "offensive",
+   "lazarusshared",
+   "noeden",
+   "nocantrip",
+   "quest"
+  ]
+ },
+ "239": {
+  "name": "Key Piece 2",
+  "pools": [],
+  "quality": 0,
+  "tags": [
+   "uniquefamiliar",
+   "offensive",
+   "lazarusshared",
+   "noeden",
+   "nocantrip",
+   "quest"
+  ]
+ },
+ "24": {
+  "name": "Dessert",
+  "pools": [
+   "beggar",
+   "boss",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "nocantrip",
+   "food"
+  ]
+ },
+ "240": {
+  "name": "Experimental Treatment",
+  "pools": [
+   "boss",
+   "demonBeggar",
+   "greedBoss",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "syringe",
+   "offensive"
+  ]
+ },
+ "241": {
+  "name": "Contract from Below",
+  "pools": [
+   "curse",
+   "demonBeggar",
+   "devil"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nogreed"
+  ]
+ },
+ "242": {
+  "name": "Infamy",
+  "pools": [
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "243": {
+  "name": "Trinity Shield",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "244": {
+  "name": "Tech.5",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tech",
+   "offensive"
+  ]
+ },
+ "245": {
+  "name": "20/20",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "246": {
+  "name": "Blue Map",
+  "pools": [
+   "beggar",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "lazarussharedglobal"
+  ]
+ },
+ "247": {
+  "name": "BFFS!",
+  "pools": [
+   "greedShop",
+   "shop",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "248": {
+  "name": "Hive Mind",
+  "pools": [
+   "greedShop",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "spider",
+   "offensive",
+   "fly"
+  ]
+ },
+ "249": {
+  "name": "There's Options",
+  "pools": [
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip",
+   "lazarussharedglobal",
+   "nogreed"
+  ]
+ },
+ "25": {
+  "name": "Breakfast",
+  "pools": [
+   "beggar",
+   "boss",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "nocantrip",
+   "food"
+  ]
+ },
+ "250": {
+  "name": "Bogo Bombs",
+  "pools": [
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "251": {
+  "name": "Starter Deck",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "252": {
+  "name": "Little Baggy",
+  "pools": [
+   "greedShop",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "253": {
+  "name": "Magic Scab",
+  "pools": [
+   "boss",
+   "greedBoss",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "254": {
+  "name": "Blood Clot",
+  "pools": [
+   "boss",
+   "greedBoss",
+   "greedTreasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "255": {
+  "name": "Screw",
+  "pools": [
+   "boss",
+   "craneGame",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "256": {
+  "name": "Hot Bombs",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "257": {
+  "name": "Fire Mind",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "258": {
+  "name": "Missing No.",
+  "pools": [
+   "greedSecret",
+   "greedTreasure",
+   "secret"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "259": {
+  "name": "Dark Matter",
+  "pools": [
+   "demonBeggar",
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "26": {
+  "name": "Rotten Meat",
+  "pools": [
+   "beggar",
+   "boss",
+   "greedBoss",
+   "rottenBeggar"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "nocantrip",
+   "food"
+  ]
+ },
+ "260": {
+  "name": "Black Candle",
+  "pools": [
+   "curse",
+   "greedCurse",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "lazarussharedglobal"
+  ]
+ },
+ "261": {
+  "name": "Proptosis",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "262": {
+  "name": "Missing Page 2",
+  "pools": [
+   "demonBeggar",
+   "devil",
+   "greedSecret",
+   "secret"
+  ],
+  "quality": 0,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "263": {
+  "name": "",
+  "pools": [
+   "craneGame",
+   "greedSecret",
+   "secret"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "264": {
+  "name": "Smart Fly",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "fly"
+  ]
+ },
+ "265": {
+  "name": "Dry Baby",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual"
+  ]
+ },
+ "266": {
+  "name": "Juicy Sack",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "spider",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "267": {
+  "name": "Robo-Baby 2.0",
+  "pools": [
+   "babyShop",
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "baby",
+   "tech",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "268": {
+  "name": "Rotten Baby",
+  "pools": [
+   "babyShop",
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "rottenBeggar",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "269": {
+  "name": "Headless Baby",
+  "pools": [
+   "babyShop",
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "27": {
+  "name": "Wooden Spoon",
+  "pools": [
+   "boss",
+   "greedBoss",
+   "woodenChest"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "270": {
+  "name": "Leech",
+  "pools": [
+   "babyShop",
+   "greedDevil",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "271": {
+  "name": "Mystery Sack",
+  "pools": [
+   "beggar",
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "272": {
+  "name": "BBF",
+  "pools": [
+   "babyShop",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive",
+   "fly"
+  ]
+ },
+ "273": {
+  "name": "Bob's Brain",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "rottenBeggar",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "bob",
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "274": {
+  "name": "Best Bud",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "fly"
+  ]
+ },
+ "275": {
+  "name": "Lil Brimstone",
+  "pools": [
+   "babyShop",
+   "devil",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "276": {
+  "name": "Isaac's Heart",
+  "pools": [
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 0,
+  "tags": [
+   "uniquefamiliar",
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "277": {
+  "name": "Lil Haunt",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "278": {
+  "name": "Dark Bum",
+  "pools": [
+   "babyShop",
+   "demonBeggar",
+   "devil",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "279": {
+  "name": "Big Fan",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "fly"
+  ]
+ },
+ "28": {
+  "name": "The Belt",
+  "pools": [
+   "boss",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "280": {
+  "name": "Sissy Longlegs",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "spider",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "281": {
+  "name": "Punching Bag",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "282": {
+  "name": "How to Jump",
+  "pools": [
+   "library",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "book"
+  ]
+ },
+ "283": {
+  "name": "D100",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "284": {
+  "name": "D4",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "285": {
+  "name": "D10",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "286": {
+  "name": "Blank Card",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "287": {
+  "name": "Book of Secrets",
+  "pools": [
+   "library",
+   "secret",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "book",
+   "offensive"
+  ]
+ },
+ "288": {
+  "name": "Box of Spiders",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "spider",
+   "offensive"
+  ]
+ },
+ "289": {
+  "name": "Red Candle",
+  "pools": [
+   "greedShop",
+   "shop",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "29": {
+  "name": "Mom's Underwear",
+  "pools": [
+   "boss",
+   "goldenChest",
+   "greedBoss",
+   "momsChest",
+   "oldChest"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "mom",
+   "offensive"
+  ]
+ },
+ "290": {
+  "name": "The Jar",
+  "pools": [
+   "shop"
+  ],
+  "quality": 0,
+  "tags": [
+   "nolostbr",
+   "nocantrip"
+  ]
+ },
+ "291": {
+  "name": "Flush!",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "poop",
+   "offensive"
+  ]
+ },
+ "292": {
+  "name": "Satanic Bible",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "library",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "nolostbr",
+   "book"
+  ]
+ },
+ "293": {
+  "name": "Head of Krampus",
+  "pools": [],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "294": {
+  "name": "Butter Bean",
+  "pools": [
+   "beggar",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "295": {
+  "name": "Magic Fingers",
+  "pools": [
+   "shop",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "296": {
+  "name": "Converter",
+  "pools": [
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "297": {
+  "name": "Pandora's Box",
+  "pools": [
+   "greedShop",
+   "redChest",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "298": {
+  "name": "Unicorn Stump",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": []
+ },
+ "299": {
+  "name": "Taurus",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "stars"
+  ]
+ },
+ "3": {
+  "name": "Spoon Bender",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "30": {
+  "name": "Mom's Heels",
+  "pools": [
+   "boss",
+   "greedBoss",
+   "momsChest",
+   "oldChest",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "mom",
+   "offensive"
+  ]
+ },
+ "300": {
+  "name": "Aries",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "301": {
+  "name": "Cancer",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "stars"
+  ]
+ },
+ "302": {
+  "name": "Leo",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "stars"
+  ]
+ },
+ "303": {
+  "name": "Virgo",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "stars"
+  ]
+ },
+ "304": {
+  "name": "Libra",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "305": {
+  "name": "Scorpio",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "306": {
+  "name": "Sagittarius",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "307": {
+  "name": "Capricorn",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive",
+   "stars"
+  ]
+ },
+ "308": {
+  "name": "Aquarius",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "309": {
+  "name": "Pisces",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive",
+   "stars"
+  ]
+ },
+ "31": {
+  "name": "Mom's Lipstick",
+  "pools": [
+   "boss",
+   "greedBoss",
+   "momsChest",
+   "oldChest",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "mom",
+   "offensive"
+  ]
+ },
+ "310": {
+  "name": "Eve's Mascara",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "311": {
+  "name": "Judas' Shadow",
+  "pools": [
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr",
+   "nocantrip",
+   "nochallenge"
+  ]
+ },
+ "312": {
+  "name": "Maggy's Bow",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "313": {
+  "name": "Holy Mantle",
+  "pools": [
+   "angel",
+   "greedAngel",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "angel"
+  ]
+ },
+ "314": {
+  "name": "Thunder Thighs",
+  "pools": [
+   "greedBoss",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "315": {
+  "name": "Strange Attractor",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "316": {
+  "name": "Cursed Eye",
+  "pools": [
+   "greedSecret",
+   "greedTreasure",
+   "redChest",
+   "secret",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "317": {
+  "name": "Mysterious Liquid",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "318": {
+  "name": "Gemini",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive",
+   "stars"
+  ]
+ },
+ "319": {
+  "name": "Cain's Other Eye",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "32": {
+  "name": "Wire Coat Hanger",
+  "pools": [
+   "boss",
+   "craneGame",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "320": {
+  "name": "???'s Only Friend",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive",
+   "fly"
+  ]
+ },
+ "321": {
+  "name": "Samson's Chains",
+  "pools": [
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "322": {
+  "name": "Mongo Baby",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "323": {
+  "name": "Isaac's Tears",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "324": {
+  "name": "Undefined",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "325": {
+  "name": "Scissors",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "326": {
+  "name": "Breath of Life",
+  "pools": [
+   "angel"
+  ],
+  "quality": 0,
+  "tags": [
+   "nolostbr",
+   "nocantrip"
+  ]
+ },
+ "327": {
+  "name": "The Polaroid",
+  "pools": [],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "lazarusshared",
+   "noeden",
+   "quest"
+  ]
+ },
+ "328": {
+  "name": "The Negative",
+  "pools": [],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "lazarusshared",
+   "noeden",
+   "quest"
+  ]
+ },
+ "329": {
+  "name": "The Ludovico Technique",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "33": {
+  "name": "The Bible",
+  "pools": [
+   "angel",
+   "library",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "book",
+   "offensive",
+   "angel"
+  ]
+ },
+ "330": {
+  "name": "Soy Milk",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "331": {
+  "name": "Godhead",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "offensive",
+   "angel"
+  ]
+ },
+ "332": {
+  "name": "Lazarus' Rags",
+  "pools": [
+   "angel",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "nocantrip",
+   "nochallenge"
+  ]
+ },
+ "333": {
+  "name": "The Mind",
+  "pools": [
+   "angel",
+   "greedAngel",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "lazarussharedglobal"
+  ]
+ },
+ "334": {
+  "name": "The Body",
+  "pools": [
+   "angel",
+   "greedAngel",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "335": {
+  "name": "The Soul",
+  "pools": [
+   "angel",
+   "greedAngel",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "336": {
+  "name": "Dead Onion",
+  "pools": [
+   "greedTreasure",
+   "rottenBeggar",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "dead",
+   "offensive"
+  ]
+ },
+ "337": {
+  "name": "Broken Watch",
+  "pools": [
+   "craneGame",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "338": {
+  "name": "The Boomerang",
+  "pools": [
+   "craneGame",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "339": {
+  "name": "Safety Pin",
+  "pools": [
+   "boss",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "34": {
+  "name": "The Book of Belial",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "library"
+  ],
+  "quality": 2,
+  "tags": [
+   "book",
+   "offensive",
+   "lazarussharedglobal"
+  ]
+ },
+ "340": {
+  "name": "Caffeine Pill",
+  "pools": [
+   "boss",
+   "demonBeggar",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "341": {
+  "name": "Torn Photo",
+  "pools": [
+   "boss",
+   "goldenChest",
+   "greedBoss",
+   "oldChest"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "342": {
+  "name": "Blue Cap",
+  "pools": [
+   "boss",
+   "greedBoss"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "mushroom",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "343": {
+  "name": "Latch Key",
+  "pools": [
+   "boss",
+   "goldenChest",
+   "greedBoss",
+   "keyMaster"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "344": {
+  "name": "Match Book",
+  "pools": [
+   "boss",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "345": {
+  "name": "Synthoil",
+  "pools": [
+   "boss",
+   "demonBeggar",
+   "greedBoss"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "syringe",
+   "offensive"
+  ]
+ },
+ "346": {
+  "name": "A Snack",
+  "pools": [
+   "boss",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "food"
+  ]
+ },
+ "347": {
+  "name": "Diplopia",
+  "pools": [
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "348": {
+  "name": "Placebo",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "349": {
+  "name": "Wooden Nickel",
+  "pools": [
+   "greedTreasure",
+   "shop",
+   "woodenChest"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "35": {
+  "name": "The Necronomicon",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "greedSecret",
+   "greedTreasure",
+   "library",
+   "secret"
+  ],
+  "quality": 1,
+  "tags": [
+   "book",
+   "offensive"
+  ]
+ },
+ "350": {
+  "name": "Toxic Shock",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "351": {
+  "name": "Mega Bean",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "352": {
+  "name": "Glass Cannon",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "353": {
+  "name": "Bomber Boy",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "354": {
+  "name": "Crack Jacks",
+  "pools": [
+   "boss",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "355": {
+  "name": "Mom's Pearls",
+  "pools": [
+   "boss",
+   "goldenChest",
+   "greedBoss",
+   "momsChest",
+   "oldChest"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "mom",
+   "offensive"
+  ]
+ },
+ "356": {
+  "name": "Car Battery",
+  "pools": [
+   "batteryBum",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "battery",
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "357": {
+  "name": "Box of Friends",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "358": {
+  "name": "The Wiz",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "359": {
+  "name": "8 Inch Nails",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "36": {
+  "name": "The Poop",
+  "pools": [
+   "shellGame",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "poop"
+  ]
+ },
+ "360": {
+  "name": "Incubus",
+  "pools": [
+   "babyShop",
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "361": {
+  "name": "Fate's Reward",
+  "pools": [
+   "babyShop",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "362": {
+  "name": "Lil Chest",
+  "pools": [
+   "beggar",
+   "craneGame",
+   "greedTreasure",
+   "treasure",
+   "woodenChest"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "363": {
+  "name": "Sworn Protector",
+  "pools": [
+   "angel",
+   "babyShop",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual"
+  ]
+ },
+ "364": {
+  "name": "Friend Zone",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive",
+   "fly"
+  ]
+ },
+ "365": {
+  "name": "Lost Fly",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive",
+   "fly"
+  ]
+ },
+ "366": {
+  "name": "Scatter Bombs",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "367": {
+  "name": "Sticky Bombs",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "spider",
+   "offensive"
+  ]
+ },
+ "368": {
+  "name": "Epiphora",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "369": {
+  "name": "Continuum",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "37": {
+  "name": "Mr. Boom",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "370": {
+  "name": "Mr. Dolly",
+  "pools": [
+   "boss",
+   "craneGame",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "371": {
+  "name": "Curse of the Tower",
+  "pools": [
+   "curse",
+   "greedCurse",
+   "greedTreasure",
+   "redChest",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "372": {
+  "name": "Charged Baby",
+  "pools": [
+   "babyShop",
+   "batteryBum",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "373": {
+  "name": "Dead Eye",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "374": {
+  "name": "Holy Light",
+  "pools": [
+   "angel",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "angel"
+  ]
+ },
+ "375": {
+  "name": "Host Hat",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "376": {
+  "name": "Restock",
+  "pools": [
+   "beggar",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nogreed"
+  ]
+ },
+ "377": {
+  "name": "Bursting Sack",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "spider",
+   "offensive"
+  ]
+ },
+ "378": {
+  "name": "No. 2",
+  "pools": [
+   "greedTreasure",
+   "shellGame",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "poop",
+   "summonable",
+   "offensive"
+  ]
+ },
+ "379": {
+  "name": "Pupula Duplex",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "38": {
+  "name": "Tammy's Head",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "dead",
+   "offensive"
+  ]
+ },
+ "380": {
+  "name": "Pay To Play",
+  "pools": [
+   "greedShop",
+   "greedTreasure",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip",
+   "lazarussharedglobal"
+  ]
+ },
+ "381": {
+  "name": "Eden's Blessing",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "382": {
+  "name": "Friendly Ball",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "383": {
+  "name": "Tear Detonator",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "384": {
+  "name": "Lil Gurdy",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "385": {
+  "name": "Bumbo",
+  "pools": [
+   "babyShop",
+   "beggar",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "386": {
+  "name": "D12",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "387": {
+  "name": "Censer",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "388": {
+  "name": "Key Bum",
+  "pools": [
+   "babyShop",
+   "keyMaster",
+   "secret",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "389": {
+  "name": "Rune Bag",
+  "pools": [
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "39": {
+  "name": "Mom's Bra",
+  "pools": [
+   "momsChest",
+   "oldChest",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "mom",
+   "offensive"
+  ]
+ },
+ "390": {
+  "name": "Seraphim",
+  "pools": [
+   "angel",
+   "babyShop",
+   "greedAngel",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "391": {
+  "name": "Betrayal",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "392": {
+  "name": "Zodiac",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "393": {
+  "name": "Serpent's Kiss",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "394": {
+  "name": "Marked",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "395": {
+  "name": "Tech X",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "tech",
+   "offensive"
+  ]
+ },
+ "396": {
+  "name": "Ventricle Razor",
+  "pools": [
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "397": {
+  "name": "Tractor Beam",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "398": {
+  "name": "God's Flesh",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "mushroom",
+   "offensive"
+  ]
+ },
+ "399": {
+  "name": "Maw of the Void",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 4,
+  "tags": [
+   "devil",
+   "summonable",
+   "offensive"
+  ]
+ },
+ "4": {
+  "name": "Cricket's Head",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "dead",
+   "offensive"
+  ]
+ },
+ "40": {
+  "name": "Kamikaze!",
+  "pools": [
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 0,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "400": {
+  "name": "Spear of Destiny",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "401": {
+  "name": "Explosivo",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "402": {
+  "name": "Chaos",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret",
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "403": {
+  "name": "Spider Mod",
+  "pools": [
+   "babyShop",
+   "craneGame",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "spider",
+   "offensive"
+  ]
+ },
+ "404": {
+  "name": "Farting Baby",
+  "pools": [
+   "babyShop",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual"
+  ]
+ },
+ "405": {
+  "name": "GB Bug",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "406": {
+  "name": "D8",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "407": {
+  "name": "Purity",
+  "pools": [
+   "greedAngel",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "408": {
+  "name": "Athame",
+  "pools": [
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "409": {
+  "name": "Empty Vessel",
+  "pools": [
+   "demonBeggar",
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "41": {
+  "name": "Mom's Pad",
+  "pools": [
+   "momsChest",
+   "oldChest",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "mom",
+   "offensive"
+  ]
+ },
+ "410": {
+  "name": "Evil Eye",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "411": {
+  "name": "Lusty Blood",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "412": {
+  "name": "Cambion Conception",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "413": {
+  "name": "Immaculate Conception",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "414": {
+  "name": "More Options",
+  "pools": [
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip",
+   "lazarussharedglobal"
+  ]
+ },
+ "415": {
+  "name": "Crown Of Light",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "416": {
+  "name": "Deep Pockets",
+  "pools": [
+   "greedShop",
+   "greedTreasure",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip",
+   "lazarussharedglobal"
+  ]
+ },
+ "417": {
+  "name": "Succubus",
+  "pools": [
+   "babyShop",
+   "devil"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "418": {
+  "name": "Fruit Cake",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "419": {
+  "name": "Teleport 2.0",
+  "pools": [
+   "craneGame",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "42": {
+  "name": "Bob's Rotten Head",
+  "pools": [
+   "greedTreasure",
+   "rottenBeggar",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "bob",
+   "dead",
+   "offensive"
+  ]
+ },
+ "420": {
+  "name": "Black Powder",
+  "pools": [
+   "demonBeggar",
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "421": {
+  "name": "Kidney Bean",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "422": {
+  "name": "Glowing Hour Glass",
+  "pools": [
+   "craneGame",
+   "shop",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "423": {
+  "name": "Circle of Protection",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "424": {
+  "name": "Sack Head",
+  "pools": [
+   "greedSecret",
+   "secret",
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "425": {
+  "name": "Night Light",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "426": {
+  "name": "Obsessed Fan",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "summonable",
+   "offensive",
+   "fly"
+  ]
+ },
+ "427": {
+  "name": "Mine Crafter",
+  "pools": [
+   "craneGame",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "428": {
+  "name": "PJs",
+  "pools": [
+   "boss",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "429": {
+  "name": "Head of the Keeper",
+  "pools": [],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "430": {
+  "name": "Papa Fly",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive",
+   "fly"
+  ]
+ },
+ "431": {
+  "name": "Multidimensional Baby",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "baby",
+   "offensive"
+  ]
+ },
+ "432": {
+  "name": "Glitter Bombs",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "433": {
+  "name": "My Shadow",
+  "pools": [
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 0,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "434": {
+  "name": "Jar of Flies",
+  "pools": [
+   "greedShop",
+   "greedTreasure",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip",
+   "fly"
+  ]
+ },
+ "435": {
+  "name": "Lil Loki",
+  "pools": [
+   "babyShop",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "436": {
+  "name": "Milk!",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "uniquefamiliar",
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "437": {
+  "name": "D7",
+  "pools": [
+   "craneGame",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "438": {
+  "name": "Binky",
+  "pools": [
+   "boss",
+   "craneGame",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "439": {
+  "name": "Mom's Box",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "momsChest",
+   "oldChest",
+   "shop",
+   "woodenChest"
+  ],
+  "quality": 3,
+  "tags": [
+   "mom",
+   "offensive"
+  ]
+ },
+ "44": {
+  "name": "Teleport!",
+  "pools": [
+   "craneGame",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "440": {
+  "name": "Kidney Stone",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "441": {
+  "name": "Mega Blast",
+  "pools": [
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 4,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "442": {
+  "name": "Dark Princes Crown",
+  "pools": [
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "tearsup"
+  ]
+ },
+ "443": {
+  "name": "Apple!",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "444": {
+  "name": "Lead Pencil",
+  "pools": [
+   "craneGame",
+   "goldenChest",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "445": {
+  "name": "Dog Tooth",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "446": {
+  "name": "Dead Tooth",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "447": {
+  "name": "Linger Bean",
+  "pools": [
+   "beggar",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "448": {
+  "name": "Shard of Glass",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "449": {
+  "name": "Metal Plate",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "45": {
+  "name": "Yum Heart",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "450": {
+  "name": "Eye of Greed",
+  "pools": [
+   "greedSecret",
+   "greedTreasure",
+   "secret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "451": {
+  "name": "Tarot Cloth",
+  "pools": [
+   "craneGame",
+   "curse",
+   "greedCurse",
+   "greedDevil",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "452": {
+  "name": "Varicose Veins",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "453": {
+  "name": "Compound Fracture",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "454": {
+  "name": "Polydactyly",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "455": {
+  "name": "Dad's Lost Coin",
+  "pools": [
+   "beggar",
+   "boss",
+   "goldenChest",
+   "greedBoss",
+   "oldChest"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "456": {
+  "name": "Moldy Bread",
+  "pools": [
+   "beggar",
+   "boss",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "food"
+  ]
+ },
+ "457": {
+  "name": "Cone Head",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "458": {
+  "name": "Belly Button",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "459": {
+  "name": "Sinus Infection",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "46": {
+  "name": "Lucky Foot",
+  "pools": [
+   "beggar",
+   "craneGame",
+   "greedShop",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "460": {
+  "name": "Glaucoma",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "461": {
+  "name": "Parasitoid",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "spider",
+   "offensive",
+   "fly"
+  ]
+ },
+ "462": {
+  "name": "Eye of Belial",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "463": {
+  "name": "Sulfuric Acid",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "464": {
+  "name": "Glyph of Balance",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "465": {
+  "name": "Analog Stick",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "466": {
+  "name": "Contagion",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "467": {
+  "name": "Finger!",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "468": {
+  "name": "Shade",
+  "pools": [
+   "babyShop",
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil"
+  ],
+  "quality": 0,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "469": {
+  "name": "Depression",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "47": {
+  "name": "Doctor's Remote",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "470": {
+  "name": "Hushy",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "471": {
+  "name": "Lil Monstro",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "472": {
+  "name": "King Baby",
+  "pools": [
+   "babyShop",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "baby",
+   "offensive"
+  ]
+ },
+ "473": {
+  "name": "Big Chubby",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "474": {
+  "name": "Tonsil",
+  "pools": [],
+  "quality": 0,
+  "tags": []
+ },
+ "475": {
+  "name": "Plan C",
+  "pools": [
+   "curse",
+   "demonBeggar",
+   "devil",
+   "greedCurse",
+   "greedShop",
+   "redChest",
+   "shop",
+   "ultraSecret"
+  ],
+  "quality": 0,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "476": {
+  "name": "D1",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "477": {
+  "name": "Void",
+  "pools": [
+   "angel",
+   "devil",
+   "greedShop"
+  ],
+  "quality": 4,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "478": {
+  "name": "Pause",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "479": {
+  "name": "Smelter",
+  "pools": [
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "48": {
+  "name": "Cupid's Arrow",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "480": {
+  "name": "Compost",
+  "pools": [
+   "rottenBeggar",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "481": {
+  "name": "Dataminer",
+  "pools": [
+   "greedShop",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 0,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "482": {
+  "name": "Clicker",
+  "pools": [
+   "greedShop",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "nolostbr",
+   "nochallenge",
+   "nodaily"
+  ]
+ },
+ "483": {
+  "name": "Mama Mega!",
+  "pools": [
+   "bombBum",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "484": {
+  "name": "Wait What?",
+  "pools": [],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "485": {
+  "name": "Crooked Penny",
+  "pools": [
+   "beggar",
+   "greedShop",
+   "shop",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "486": {
+  "name": "Dull Razor",
+  "pools": [
+   "greedShop",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": []
+ },
+ "487": {
+  "name": "Potato Peeler",
+  "pools": [
+   "demonBeggar",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "488": {
+  "name": "Metronome",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "treasure",
+   "woodenChest"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "489": {
+  "name": "D Infinity",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret"
+  ],
+  "quality": 4,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "49": {
+  "name": "Shoop da Whoop!",
+  "pools": [
+   "craneGame",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "490": {
+  "name": "Eden's Soul",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "491": {
+  "name": "Acid Baby",
+  "pools": [
+   "babyShop",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "baby",
+   "offensive"
+  ]
+ },
+ "492": {
+  "name": "YO LISTEN!",
+  "pools": [
+   "babyShop",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "fly"
+  ]
+ },
+ "493": {
+  "name": "Adrenaline",
+  "pools": [
+   "demonBeggar",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "syringe"
+  ]
+ },
+ "494": {
+  "name": "Jacob's Ladder",
+  "pools": [
+   "batteryBum",
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "495": {
+  "name": "Ghost Pepper",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "496": {
+  "name": "Euthanasia",
+  "pools": [
+   "curse",
+   "demonBeggar",
+   "greedCurse",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "syringe",
+   "offensive"
+  ]
+ },
+ "497": {
+  "name": "Camo Undies",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "498": {
+  "name": "Duality",
+  "pools": [
+   "angel",
+   "devil"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive",
+   "lazarussharedglobal"
+  ]
+ },
+ "499": {
+  "name": "Eucharist",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "lazarussharedglobal"
+  ]
+ },
+ "5": {
+  "name": "My Reflection",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "50": {
+  "name": "Steven",
+  "pools": [
+   "greedTreasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "500": {
+  "name": "Sack of Sacks",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "501": {
+  "name": "Greed's Gullet",
+  "pools": [
+   "greedSecret",
+   "secret"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "502": {
+  "name": "Large Zit",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "503": {
+  "name": "Little Horn",
+  "pools": [
+   "curse",
+   "demonBeggar",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "greedTreasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "504": {
+  "name": "Brown Nugget",
+  "pools": [
+   "greedTreasure",
+   "shellGame",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "poop",
+   "offensive"
+  ]
+ },
+ "505": {
+  "name": "Poke Go",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "506": {
+  "name": "Backstabber",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "507": {
+  "name": "Sharp Straw",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "508": {
+  "name": "Mom's Razor",
+  "pools": [
+   "greedTreasure",
+   "momsChest",
+   "oldChest",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "mom",
+   "offensive"
+  ]
+ },
+ "509": {
+  "name": "Bloodshot Eye",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "51": {
+  "name": "Pentagram",
+  "pools": [
+   "boss",
+   "craneGame",
+   "curse",
+   "demonBeggar",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "devil",
+   "summonable",
+   "offensive",
+   "lazarussharedglobal"
+  ]
+ },
+ "510": {
+  "name": "Delirious",
+  "pools": [
+   "angel"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "511": {
+  "name": "Angry Fly",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive",
+   "fly"
+  ]
+ },
+ "512": {
+  "name": "Black Hole",
+  "pools": [
+   "greedShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "513": {
+  "name": "Bozo",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "514": {
+  "name": "Broken Modem",
+  "pools": [
+   "greedTreasure",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "515": {
+  "name": "Mystery Gift",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "greedTreasure",
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "516": {
+  "name": "Sprinkler",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "517": {
+  "name": "Fast Bombs",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "518": {
+  "name": "Buddy in a Box",
+  "pools": [
+   "babyShop",
+   "craneGame",
+   "greedShop",
+   "greedTreasure",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "baby",
+   "offensive"
+  ]
+ },
+ "519": {
+  "name": "Lil Delirium",
+  "pools": [
+   "angel",
+   "babyShop",
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "52": {
+  "name": "Dr. Fetus",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "520": {
+  "name": "Jumper Cables",
+  "pools": [
+   "batteryBum",
+   "greedTreasure",
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "521": {
+  "name": "Coupon",
+  "pools": [
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "522": {
+  "name": "Telekinesis",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "523": {
+  "name": "Moving Box",
+  "pools": [
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "524": {
+  "name": "Technology Zero",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tech",
+   "offensive"
+  ]
+ },
+ "525": {
+  "name": "Leprosy",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "526": {
+  "name": "7 Seals",
+  "pools": [
+   "angel",
+   "devil",
+   "greedAngel",
+   "greedDevil"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "527": {
+  "name": "Mr. ME!",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "keyMaster",
+   "shop",
+   "woodenChest"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "528": {
+  "name": "Angelic Prism",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "529": {
+  "name": "Pop!",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "53": {
+  "name": "Magneto",
+  "pools": [
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "530": {
+  "name": "Death's List",
+  "pools": [
+   "devil"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "531": {
+  "name": "Haemolacria",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "532": {
+  "name": "Lachryphagy",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "533": {
+  "name": "Trisagion",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "534": {
+  "name": "Schoolbag",
+  "pools": [
+   "goldenChest",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "535": {
+  "name": "Blanket",
+  "pools": [
+   "greedShop",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "536": {
+  "name": "Sacrificial Altar",
+  "pools": [
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "537": {
+  "name": "Lil Spewer",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "538": {
+  "name": "Marbles",
+  "pools": [
+   "boss",
+   "craneGame",
+   "greedBoss"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "539": {
+  "name": "Mystery Egg",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "54": {
+  "name": "Treasure Map",
+  "pools": [
+   "beggar",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "lazarussharedglobal",
+   "nogreed"
+  ]
+ },
+ "540": {
+  "name": "Flat Stone",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "541": {
+  "name": "Marrow",
+  "pools": [
+   "boss",
+   "greedBoss",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "542": {
+  "name": "Slipped Rib",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "543": {
+  "name": "Hallowed Ground",
+  "pools": [
+   "angel",
+   "greedAngel",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "poop",
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "544": {
+  "name": "Pointy Rib",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "545": {
+  "name": "Book of the Dead",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "library",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "book",
+   "offensive"
+  ]
+ },
+ "546": {
+  "name": "Dad's Ring",
+  "pools": [
+   "greedSecret",
+   "oldChest",
+   "secret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "547": {
+  "name": "Divorce Papers",
+  "pools": [
+   "boss",
+   "greedBoss",
+   "oldChest"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "548": {
+  "name": "Jaw Bone",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "549": {
+  "name": "Brittle Bones",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "55": {
+  "name": "Mom's Eye",
+  "pools": [
+   "greedTreasure",
+   "momsChest",
+   "oldChest",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "mom",
+   "offensive"
+  ]
+ },
+ "550": {
+  "name": "Broken Shovel",
+  "pools": [],
+  "quality": 4,
+  "tags": [
+   "offensive",
+   "noeden",
+   "lazarussharedglobal",
+   "quest"
+  ]
+ },
+ "551": {
+  "name": "Broken Shovel",
+  "pools": [],
+  "quality": 4,
+  "tags": [
+   "offensive",
+   "noeden",
+   "lazarussharedglobal",
+   "quest"
+  ]
+ },
+ "552": {
+  "name": "Mom's Shovel",
+  "pools": [],
+  "quality": 4,
+  "tags": [
+   "mom",
+   "offensive",
+   "noeden",
+   "lazarussharedglobal",
+   "quest"
+  ]
+ },
+ "553": {
+  "name": "Mucormycosis",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "mushroom",
+   "offensive"
+  ]
+ },
+ "554": {
+  "name": "2Spooky",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "555": {
+  "name": "Golden Razor",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "556": {
+  "name": "Sulfur",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "devil",
+   "offensive"
+  ]
+ },
+ "557": {
+  "name": "Fortune Cookie",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "558": {
+  "name": "Eye Sore",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "559": {
+  "name": "120 Volt",
+  "pools": [
+   "batteryBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "56": {
+  "name": "Lemon Mishap",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "560": {
+  "name": "It Hurts",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "561": {
+  "name": "Almond Milk",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "562": {
+  "name": "Rock Bottom",
+  "pools": [
+   "greedSecret",
+   "secret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "563": {
+  "name": "Nancy Bombs",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "564": {
+  "name": "A Bar of Soap",
+  "pools": [
+   "boss",
+   "greedBoss"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "565": {
+  "name": "Blood Puppy",
+  "pools": [
+   "curse",
+   "greedCurse",
+   "greedTreasure",
+   "redChest",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "566": {
+  "name": "Dream Catcher",
+  "pools": [
+   "greedShop",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip",
+   "lazarussharedglobal"
+  ]
+ },
+ "567": {
+  "name": "Paschal Candle",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "uniquefamiliar",
+   "summonable",
+   "tearsup",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "568": {
+  "name": "Divine Intervention",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 2,
+  "tags": [
+   "angel"
+  ]
+ },
+ "569": {
+  "name": "Blood Oath",
+  "pools": [
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil"
+  ],
+  "quality": 2,
+  "tags": [
+   "uniquefamiliar",
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "57": {
+  "name": "Distant Admiration",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive",
+   "fly"
+  ]
+ },
+ "570": {
+  "name": "Playdough Cookie",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "571": {
+  "name": "Orphan Socks",
+  "pools": [
+   "goldenChest",
+   "greedSecret",
+   "secret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "572": {
+  "name": "Eye of the Occult",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "devil",
+   "summonable",
+   "offensive"
+  ]
+ },
+ "573": {
+  "name": "Immaculate Heart",
+  "pools": [
+   "angel",
+   "greedAngel",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "angel"
+  ]
+ },
+ "574": {
+  "name": "Monstrance",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "575": {
+  "name": "The Intruder",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "spider",
+   "offensive"
+  ]
+ },
+ "576": {
+  "name": "Dirty Mind",
+  "pools": [
+   "greedTreasure",
+   "shellGame",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "poop",
+   "summonable",
+   "offensive"
+  ]
+ },
+ "577": {
+  "name": "Damocles",
+  "pools": [
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "578": {
+  "name": "Free Lemonade",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "579": {
+  "name": "Spirit Sword",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "58": {
+  "name": "Book of Shadows",
+  "pools": [
+   "library",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "book",
+   "offensive"
+  ]
+ },
+ "580": {
+  "name": "Red Key",
+  "pools": [
+   "curse",
+   "keyMaster",
+   "momsChest",
+   "redChest",
+   "secret",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive",
+   "nogreed"
+  ]
+ },
+ "581": {
+  "name": "Psy Fly",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "fly"
+  ]
+ },
+ "582": {
+  "name": "Wavy Cap",
+  "pools": [
+   "greedSecret",
+   "secret"
+  ],
+  "quality": 1,
+  "tags": [
+   "mushroom",
+   "offensive"
+  ]
+ },
+ "583": {
+  "name": "Rocket in a Jar",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "584": {
+  "name": "Book of Virtues",
+  "pools": [
+   "angel",
+   "greedAngel",
+   "library"
+  ],
+  "quality": 3,
+  "tags": [
+   "book",
+   "offensive",
+   "lazarussharedglobal"
+  ]
+ },
+ "585": {
+  "name": "Alabaster Box",
+  "pools": [
+   "greedShop",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "586": {
+  "name": "The Stairway",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive",
+   "nocantrip",
+   "lazarussharedglobal"
+  ]
+ },
+ "588": {
+  "name": "Sol",
+  "pools": [
+   "planetarium"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "589": {
+  "name": "Luna",
+  "pools": [
+   "planetarium"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip",
+   "stars",
+   "lazarussharedglobal"
+  ]
+ },
+ "59": {
+  "name": "",
+  "pools": [],
+  "quality": 0,
+  "tags": []
+ },
+ "590": {
+  "name": "Mercurius",
+  "pools": [
+   "planetarium"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "591": {
+  "name": "Venus",
+  "pools": [
+   "planetarium"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "592": {
+  "name": "Terra",
+  "pools": [
+   "planetarium"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "593": {
+  "name": "Mars",
+  "pools": [
+   "planetarium"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "594": {
+  "name": "Jupiter",
+  "pools": [
+   "planetarium"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "595": {
+  "name": "Saturnus",
+  "pools": [
+   "planetarium"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "596": {
+  "name": "Uranus",
+  "pools": [
+   "planetarium"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "597": {
+  "name": "Neptunus",
+  "pools": [
+   "planetarium"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "stars"
+  ]
+ },
+ "598": {
+  "name": "Pluto",
+  "pools": [
+   "planetarium"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive",
+   "stars"
+  ]
+ },
+ "599": {
+  "name": "Voodoo Head",
+  "pools": [
+   "craneGame",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip",
+   "lazarussharedglobal"
+  ]
+ },
+ "6": {
+  "name": "Number One",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "60": {
+  "name": "The Ladder",
+  "pools": [
+   "shop",
+   "woodenChest"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "600": {
+  "name": "Eye Drops",
+  "pools": [
+   "boss",
+   "greedBoss"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "601": {
+  "name": "Act of Contrition",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive",
+   "lazarussharedglobal"
+  ]
+ },
+ "602": {
+  "name": "Member Card",
+  "pools": [
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "603": {
+  "name": "Battery Pack",
+  "pools": [
+   "batteryBum",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "battery",
+   "offensive"
+  ]
+ },
+ "604": {
+  "name": "Mom's Bracelet",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "oldChest",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "mom",
+   "offensive"
+  ]
+ },
+ "605": {
+  "name": "The Scooper",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 0,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "606": {
+  "name": "Ocular Rift",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "607": {
+  "name": "Boiled Baby",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "608": {
+  "name": "Freezer Baby",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "609": {
+  "name": "Eternal D6",
+  "pools": [
+   "craneGame",
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "610": {
+  "name": "Bird Cage",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "dead"
+  ]
+ },
+ "611": {
+  "name": "Larynx",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "612": {
+  "name": "Lost Soul",
+  "pools": [
+   "babyShop",
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "nocantrip"
+  ]
+ },
+ "614": {
+  "name": "Blood Bombs",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "615": {
+  "name": "Lil Dumpy",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "616": {
+  "name": "Bird's Eye",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "617": {
+  "name": "Lodestone",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "618": {
+  "name": "Rotten Tomato",
+  "pools": [
+   "greedTreasure",
+   "rottenBeggar",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "619": {
+  "name": "Birthright",
+  "pools": [
+   "greedShop",
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "62": {
+  "name": "Charm of the Vampire",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "nocantrip"
+  ]
+ },
+ "621": {
+  "name": "Red Stew",
+  "pools": [
+   "greedShop",
+   "shop",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "622": {
+  "name": "Genesis",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "623": {
+  "name": "Sharp Key",
+  "pools": [
+   "greedShop",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "624": {
+  "name": "Booster Pack",
+  "pools": [
+   "boss",
+   "craneGame",
+   "greedBoss",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "625": {
+  "name": "Mega Mush",
+  "pools": [
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "mushroom",
+   "offensive"
+  ]
+ },
+ "626": {
+  "name": "Knife Piece 1",
+  "pools": [],
+  "quality": 0,
+  "tags": [
+   "uniquefamiliar",
+   "lazarusshared",
+   "noeden",
+   "quest"
+  ]
+ },
+ "627": {
+  "name": "Knife Piece 2",
+  "pools": [],
+  "quality": 0,
+  "tags": [
+   "uniquefamiliar",
+   "lazarusshared",
+   "noeden",
+   "quest"
+  ]
+ },
+ "628": {
+  "name": "Death Certificate",
+  "pools": [
+   "greedSecret",
+   "secret"
+  ],
+  "quality": 4,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "629": {
+  "name": "Bot Fly",
+  "pools": [
+   "babyShop",
+   "craneGame",
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "fly"
+  ]
+ },
+ "63": {
+  "name": "The Battery",
+  "pools": [
+   "batteryBum",
+   "craneGame",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "battery",
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "631": {
+  "name": "Meat Cleaver",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "632": {
+  "name": "Evil Charm",
+  "pools": [
+   "greedSecret",
+   "secret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "633": {
+  "name": "Dogma",
+  "pools": [],
+  "quality": 0,
+  "tags": [
+   "lazarusshared",
+   "noeden",
+   "quest"
+  ]
+ },
+ "634": {
+  "name": "Purgatory",
+  "pools": [
+   "angel",
+   "devil",
+   "greedAngel",
+   "greedDevil"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "635": {
+  "name": "Stitches",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "uniquefamiliar",
+   "offensive"
+  ]
+ },
+ "636": {
+  "name": "R Key",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret"
+  ],
+  "quality": 4,
+  "tags": [
+   "offensive",
+   "nocantrip",
+   "nochallenge",
+   "nodaily"
+  ]
+ },
+ "637": {
+  "name": "Knockout Drops",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "638": {
+  "name": "Eraser",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "639": {
+  "name": "Yuck Heart",
+  "pools": [
+   "greedTreasure",
+   "rottenBeggar",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "64": {
+  "name": "Steam Sale",
+  "pools": [
+   "greedTreasure",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "640": {
+  "name": "Urn of Souls",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "641": {
+  "name": "Akeldama",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "642": {
+  "name": "Magic Skin",
+  "pools": [
+   "curse",
+   "greedCurse",
+   "redChest",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "643": {
+  "name": "Revelation",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "offensive",
+   "angel"
+  ]
+ },
+ "644": {
+  "name": "Consolation Prize",
+  "pools": [
+   "boss",
+   "craneGame",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "645": {
+  "name": "Tinytoma",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual"
+  ]
+ },
+ "646": {
+  "name": "Brimstone Bombs",
+  "pools": [
+   "bombBum",
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "647": {
+  "name": "4.5 Volt",
+  "pools": [
+   "batteryBum",
+   "greedShop",
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "battery",
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "649": {
+  "name": "Fruity Plum",
+  "pools": [
+   "babyShop",
+   "craneGame",
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive",
+   "fly"
+  ]
+ },
+ "65": {
+  "name": "Anarchist Cookbook",
+  "pools": [
+   "greedTreasure",
+   "library",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "book",
+   "offensive"
+  ]
+ },
+ "650": {
+  "name": "Plum Flute",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "fly"
+  ]
+ },
+ "651": {
+  "name": "Star of Bethlehem",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip",
+   "stars"
+  ]
+ },
+ "652": {
+  "name": "Cube Baby",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "baby"
+  ]
+ },
+ "653": {
+  "name": "Vade Retro",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "654": {
+  "name": "False PHD",
+  "pools": [
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "redChest",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "655": {
+  "name": "Spin to Win",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nocantrip"
+  ]
+ },
+ "656": {
+  "name": "Damocles",
+  "pools": [],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "657": {
+  "name": "Vasculitis",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "658": {
+  "name": "Giant Cell",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "659": {
+  "name": "Tropicamide",
+  "pools": [
+   "boss",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "66": {
+  "name": "The Hourglass",
+  "pools": [
+   "craneGame",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "660": {
+  "name": "Card Reading",
+  "pools": [
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip",
+   "stars",
+   "lazarussharedglobal",
+   "nogreed"
+  ]
+ },
+ "661": {
+  "name": "Quints",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "baby",
+   "offensive"
+  ]
+ },
+ "663": {
+  "name": "Tooth and Nail",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "664": {
+  "name": "Binge Eater",
+  "pools": [
+   "greedSecret",
+   "secret"
+  ],
+  "quality": 4,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "665": {
+  "name": "Guppy's Eye",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "redChest"
+  ],
+  "quality": 2,
+  "tags": [
+   "guppy",
+   "offensive"
+  ]
+ },
+ "667": {
+  "name": "Strawman",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret"
+  ],
+  "quality": 2,
+  "tags": [
+   "dead",
+   "offensive"
+  ]
+ },
+ "668": {
+  "name": "Dad's Note",
+  "pools": [],
+  "quality": 0,
+  "tags": [
+   "lazarusshared",
+   "noeden",
+   "quest"
+  ]
+ },
+ "669": {
+  "name": "Sausage",
+  "pools": [
+   "greedSecret",
+   "secret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "lazarussharedglobal"
+  ]
+ },
+ "67": {
+  "name": "Sister Maggy",
+  "pools": [
+   "babyShop",
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "670": {
+  "name": "Options?",
+  "pools": [
+   "shop"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nogreed"
+  ]
+ },
+ "671": {
+  "name": "Candy Heart",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "672": {
+  "name": "A Pound of Flesh",
+  "pools": [
+   "demonBeggar",
+   "devil"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "nokeeper",
+   "nogreed"
+  ]
+ },
+ "673": {
+  "name": "Redemption",
+  "pools": [],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "lazarusshared"
+  ]
+ },
+ "674": {
+  "name": "Spirit Shackles",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret"
+  ],
+  "quality": 2,
+  "tags": []
+ },
+ "675": {
+  "name": "Cracked Orb",
+  "pools": [
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "676": {
+  "name": "Empty Heart",
+  "pools": [
+   "demonBeggar",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "677": {
+  "name": "Astral Projection",
+  "pools": [
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "678": {
+  "name": "C Section",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "679": {
+  "name": "Lil Abaddon",
+  "pools": [
+   "babyShop",
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "68": {
+  "name": "Technology",
+  "pools": [
+   "craneGame",
+   "greedDevil",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tech",
+   "offensive"
+  ]
+ },
+ "680": {
+  "name": "Montezuma's Revenge",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "poop",
+   "summonable",
+   "offensive"
+  ]
+ },
+ "681": {
+  "name": "Lil Portal",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "682": {
+  "name": "Worm Friend",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "683": {
+  "name": "Bone Spurs",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "684": {
+  "name": "Hungry Soul",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "685": {
+  "name": "Jar of Wisps",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "686": {
+  "name": "Soul Locket",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "687": {
+  "name": "Friend Finder",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "688": {
+  "name": "Inner Child",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret"
+  ],
+  "quality": 2,
+  "tags": []
+ },
+ "689": {
+  "name": "Glitched Crown",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "69": {
+  "name": "Chocolate Milk",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "690": {
+  "name": "Belly Jelly",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "691": {
+  "name": "Sacred Orb",
+  "pools": [
+   "angel",
+   "greedAngel",
+   "greedSecret",
+   "greedShop",
+   "secret"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip",
+   "angel"
+  ]
+ },
+ "692": {
+  "name": "Sanguine Bond",
+  "pools": [
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "greedShop",
+   "ultraSecret"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "693": {
+  "name": "The Swarm",
+  "pools": [
+   "greedTreasure",
+   "keyMaster",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "fly"
+  ]
+ },
+ "694": {
+  "name": "Heartbreak",
+  "pools": [
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable"
+  ]
+ },
+ "695": {
+  "name": "Bloody Gust",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "696": {
+  "name": "Salvation",
+  "pools": [
+   "angel",
+   "greedAngel"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive",
+   "angel"
+  ]
+ },
+ "697": {
+  "name": "Vanishing Twin",
+  "pools": [
+   "curse",
+   "secret"
+  ],
+  "quality": 3,
+  "tags": [
+   "uniquefamiliar",
+   "offensive",
+   "nogreed"
+  ]
+ },
+ "698": {
+  "name": "Twisted Pair",
+  "pools": [
+   "babyShop",
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 4,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "699": {
+  "name": "Azazel's Rage",
+  "pools": [
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "7": {
+  "name": "Blood of the Martyr",
+  "pools": [
+   "angel",
+   "greedAngel",
+   "greedTreasure",
+   "treasure",
+   "woodenChest"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "70": {
+  "name": "Growth Hormones",
+  "pools": [
+   "boss",
+   "demonBeggar",
+   "greedBoss"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "syringe",
+   "offensive"
+  ]
+ },
+ "700": {
+  "name": "Echo Chamber",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip",
+   "stars"
+  ]
+ },
+ "701": {
+  "name": "Isaac's Tomb",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "secret"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "702": {
+  "name": "Vengeful Spirit",
+  "pools": [
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "703": {
+  "name": "Esau Jr.",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "greedTreasure",
+   "secret",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "704": {
+  "name": "Berserk!",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "705": {
+  "name": "Dark Arts",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "706": {
+  "name": "Abyss",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 4,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "707": {
+  "name": "Supper",
+  "pools": [
+   "beggar",
+   "boss",
+   "greedBoss"
+  ],
+  "quality": 1,
+  "tags": [
+   "nolostbr",
+   "food"
+  ]
+ },
+ "708": {
+  "name": "Stapler",
+  "pools": [
+   "boss",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "709": {
+  "name": "Suplex!",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "71": {
+  "name": "Mini Mush",
+  "pools": [
+   "greedBoss",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "mushroom",
+   "offensive"
+  ]
+ },
+ "710": {
+  "name": "Bag of Crafting",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "nochallenge",
+   "nodaily"
+  ]
+ },
+ "711": {
+  "name": "Flip",
+  "pools": [
+   "curse",
+   "greedCurse",
+   "greedSecret",
+   "greedShop",
+   "secret",
+   "ultraSecret"
+  ],
+  "quality": 4,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "712": {
+  "name": "Lemegeton",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "library"
+  ],
+  "quality": 3,
+  "tags": [
+   "book",
+   "offensive"
+  ]
+ },
+ "713": {
+  "name": "Sumptorium",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "714": {
+  "name": "Recall",
+  "pools": [],
+  "quality": 0,
+  "tags": [
+   "noeden"
+  ]
+ },
+ "715": {
+  "name": "Hold",
+  "pools": [],
+  "quality": 0,
+  "tags": [
+   "noeden",
+   "nocantrip"
+  ]
+ },
+ "716": {
+  "name": "Keeper's Sack",
+  "pools": [
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "shop"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "717": {
+  "name": "Keeper's Kin",
+  "pools": [
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "spider",
+   "offensive"
+  ]
+ },
+ "719": {
+  "name": "Keeper's Box",
+  "pools": [
+   "greedSecret",
+   "greedTreasure",
+   "secret",
+   "shop",
+   "woodenChest"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "72": {
+  "name": "Rosary",
+  "pools": [
+   "angel",
+   "greedAngel",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "nocantrip",
+   "angel"
+  ]
+ },
+ "720": {
+  "name": "Everything Jar",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "721": {
+  "name": "TMTRAINER",
+  "pools": [
+   "greedSecret",
+   "greedShop",
+   "greedTreasure",
+   "secret"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "722": {
+  "name": "Anima Sola",
+  "pools": [
+   "greedShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "723": {
+  "name": "Spindown Dice",
+  "pools": [
+   "craneGame",
+   "greedSecret",
+   "greedShop",
+   "greedTreasure",
+   "secret",
+   "treasure"
+  ],
+  "quality": 4,
+  "tags": [
+   "offensive",
+   "nocantrip",
+   "nochallenge",
+   "nodaily"
+  ]
+ },
+ "724": {
+  "name": "Hypercoagulation",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "725": {
+  "name": "IBS",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "726": {
+  "name": "Hemoptysis",
+  "pools": [
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "727": {
+  "name": "Ghost Bombs",
+  "pools": [
+   "bombBum",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "728": {
+  "name": "Gello",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "729": {
+  "name": "Decap Attack",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "73": {
+  "name": "Cube of Meat",
+  "pools": [
+   "babyShop",
+   "greedBoss",
+   "greedCurse",
+   "greedShop",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "monstermanual"
+  ]
+ },
+ "730": {
+  "name": "Glass Eye",
+  "pools": [
+   "boss",
+   "craneGame",
+   "goldenChest",
+   "greedBoss"
+  ],
+  "quality": 3,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "731": {
+  "name": "Stye",
+  "pools": [
+   "boss",
+   "greedBoss"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "732": {
+  "name": "Mom's Ring",
+  "pools": [
+   "goldenChest",
+   "greedShop",
+   "momsChest"
+  ],
+  "quality": 3,
+  "tags": [
+   "mom",
+   "offensive"
+  ]
+ },
+ "74": {
+  "name": "A Quarter",
+  "pools": [
+   "devil",
+   "goldenChest",
+   "greedDevil"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "75": {
+  "name": "PHD",
+  "pools": [
+   "greedShop",
+   "shop",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "76": {
+  "name": "X-Ray Vision",
+  "pools": [
+   "greedShop",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "77": {
+  "name": "My Little Unicorn",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "78": {
+  "name": "Book of Revelations",
+  "pools": [
+   "greedAngel",
+   "greedTreasure",
+   "library",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr",
+   "book",
+   "lazarussharedglobal"
+  ]
+ },
+ "79": {
+  "name": "The Mark",
+  "pools": [
+   "curse",
+   "demonBeggar",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "devil",
+   "summonable",
+   "offensive"
+  ]
+ },
+ "8": {
+  "name": "Brother Bobby",
+  "pools": [
+   "babyShop",
+   "devil",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "baby",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "80": {
+  "name": "The Pact",
+  "pools": [
+   "curse",
+   "demonBeggar",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "devil",
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "81": {
+  "name": "Dead Cat",
+  "pools": [
+   "curse",
+   "devil",
+   "greedCurse",
+   "greedDevil",
+   "redChest"
+  ],
+  "quality": 3,
+  "tags": [
+   "uniquefamiliar",
+   "dead",
+   "guppy",
+   "nocantrip"
+  ]
+ },
+ "82": {
+  "name": "Lord of the Pit",
+  "pools": [
+   "demonBeggar",
+   "devil",
+   "greedDevil",
+   "ultraSecret"
+  ],
+  "quality": 3,
+  "tags": [
+   "devil",
+   "nolostbr",
+   "summonable"
+  ]
+ },
+ "83": {
+  "name": "The Nail",
+  "pools": [
+   "demonBeggar",
+   "devil",
+   "greedDevil"
+  ],
+  "quality": 3,
+  "tags": [
+   "devil"
+  ]
+ },
+ "84": {
+  "name": "We Need To Go Deeper!",
+  "pools": [
+   "devil",
+   "greedSecret",
+   "greedShop",
+   "secret"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "85": {
+  "name": "Deck of Cards",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "shop",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive",
+   "nocantrip",
+   "stars"
+  ]
+ },
+ "86": {
+  "name": "Monstro's Tooth",
+  "pools": [
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "87": {
+  "name": "Loki's Horns",
+  "pools": [
+   "demonBeggar",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "88": {
+  "name": "Little Chubby",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "89": {
+  "name": "Spider Bite",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "spider",
+   "offensive"
+  ]
+ },
+ "9": {
+  "name": "Skatole",
+  "pools": [
+   "shellGame"
+  ],
+  "quality": 0,
+  "tags": [
+   "poop",
+   "summonable",
+   "nocantrip",
+   "fly"
+  ]
+ },
+ "90": {
+  "name": "The Small Rock",
+  "pools": [
+   "craneGame"
+  ],
+  "quality": 3,
+  "tags": [
+   "summonable",
+   "tearsup",
+   "offensive"
+  ]
+ },
+ "91": {
+  "name": "Spelunker Hat",
+  "pools": [
+   "craneGame",
+   "greedShop",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "offensive"
+  ]
+ },
+ "92": {
+  "name": "Super Bandage",
+  "pools": [
+   "boss",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr"
+  ]
+ },
+ "93": {
+  "name": "The Gamekid",
+  "pools": [
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "offensive"
+  ]
+ },
+ "94": {
+  "name": "Sack of Pennies",
+  "pools": [
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "offensive",
+   "nocantrip"
+  ]
+ },
+ "95": {
+  "name": "Robo-Baby",
+  "pools": [
+   "babyShop",
+   "craneGame",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 1,
+  "tags": [
+   "summonable",
+   "baby",
+   "tech",
+   "monstermanual",
+   "offensive"
+  ]
+ },
+ "96": {
+  "name": "Little C.H.A.D.",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure",
+   "ultraSecret"
+  ],
+  "quality": 2,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "nocantrip"
+  ]
+ },
+ "97": {
+  "name": "The Book of Sin",
+  "pools": [
+   "devil",
+   "greedDevil",
+   "greedTreasure",
+   "library",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "book",
+   "offensive"
+  ]
+ },
+ "98": {
+  "name": "The Relic",
+  "pools": [
+   "angel",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 3,
+  "tags": [
+   "nolostbr",
+   "summonable",
+   "nocantrip"
+  ]
+ },
+ "99": {
+  "name": "Little Gish",
+  "pools": [
+   "babyShop",
+   "greedTreasure",
+   "treasure"
+  ],
+  "quality": 2,
+  "tags": [
+   "summonable",
+   "monstermanual",
+   "offensive"
+  ]
+ }
+}

@@ -1,176 +1,234 @@
 [
-    {
-        "id": 1,
-        "consumable": "Red Heart",
-        "quality": 1,
-        "pool_influence": null
-    },
-    {
-        "id": 2,
-        "consumable": "Soul Heart",
-        "quality": 4,
-        "pool_influence": null
-    },
-    {
-        "id": 3,
-        "consumable": "Black Heart",
-        "quality": 5,
-        "pool_influence": "Devil Room (+10x)"
-    },
-    {
-        "id": 4,
-        "consumable": "Eternal Heart",
-        "quality": 5,
-        "pool_influence": "Angel Room (+10x)"
-    },
-    {
-        "id": 5,
-        "consumable": "Gold Heart",
-        "quality": 5,
-        "pool_influence": "Golden Chest (+10x)"
-    },
-    {
-        "id": 6,
-        "consumable": "Bone Heart",
-        "quality": 5,
-        "pool_influence": "Secret Room (+5x)"
-    },
-    {
-        "id": 7,
-        "consumable": "Rotten Heart",
-        "quality": 1,
-        "pool_influence": "Curse Room (+10x)"
-    },
-    {
-        "id": 8,
-        "consumable": "Penny",
-        "quality": 1,
-        "pool_influence": null
-    },
-    {
-        "id": 9,
-        "consumable": "Nickel",
-        "quality": 3,
-        "pool_influence": null
-    },
-    {
-        "id": 10,
-        "consumable": "Dime",
-        "quality": 5,
-        "pool_influence": null
-    },
-    {
-        "id": 11,
-        "consumable": "Lucky Penny",
-        "quality": 8,
-        "pool_influence": null
-    },
-    {
-        "id": 12,
-        "consumable": "Key",
-        "quality": 2,
-        "pool_influence": null
-    },
-    {
-        "id": 13,
-        "consumable": "Golden Key",
-        "quality": 7,
-        "pool_influence": null
-    },
-    {
-        "id": 14,
-        "consumable": "Charged Key",
-        "quality": 5,
-        "pool_influence": null
-    },
-    {
-        "id": 15,
-        "consumable": "Bomb",
-        "quality": 2,
-        "pool_influence": null
-    },
-    {
-        "id": 16,
-        "consumable": "Golden Bomb",
-        "quality": 7,
-        "pool_influence": null
-    },
-    {
-        "id": 17,
-        "consumable": "Giga Bomb",
-        "quality": 10,
-        "pool_influence": null
-    },
-    {
-        "id": 18,
-        "consumable": "Micro Battery",
-        "quality": 2,
-        "pool_influence": null
-    },
-    {
-        "id": 19,
-        "consumable": "Lil' Battery",
-        "quality": 4,
-        "pool_influence": null
-    },
-    {
-        "id": 20,
-        "consumable": "Mega Battery",
-        "quality": 8,
-        "pool_influence": null
-    },
-    {
-        "id": 21,
-        "consumable": "Card",
-        "quality": 2,
-        "pool_influence": null
-    },
-    {
-        "id": 22,
-        "consumable": "Pill",
-        "quality": 2,
-        "pool_influence": null
-    },
-    {
-        "id": 23,
-        "consumable": "Rune / Soul Stone",
-        "quality": 4,
-        "pool_influence": "Planetarium (if no Penny/Bomb/Key/Heart)"
-    },
-    {
-        "id": 24,
-        "consumable": "Dice Shard",
-        "quality": 4,
-        "pool_influence": null
-    },
-    {
-        "id": 25,
-        "consumable": "Cracked Key",
-        "quality": 2,
-        "pool_influence": "Red Chest (+10x)"
-    },
-    {
-        "id": 26,
-        "consumable": "Golden Penny",
-        "quality": 7,
-        "pool_influence": null
-    },
-    {
-        "id": 27,
-        "consumable": "Golden Pill",
-        "quality": 7,
-        "pool_influence": null
-    },
-    {
-        "id": 28,
-        "consumable": "Golden Battery",
-        "quality": 7,
-        "pool_influence": null
-    },
-    {
-        "id": 29,
-        "consumable": "Poop Nugget",
-        "quality": 0,
-        "pool_influence": "Shell Game (+10x)"
-    }
+ {
+  "id": 1,
+  "consumable": "Red Heart",
+  "quality": 1,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 2,
+  "consumable": "Soul Heart",
+  "quality": 4,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 3,
+  "consumable": "Black Heart",
+  "quality": 5,
+  "pool_influence": "Devil Room (+10x)",
+  "pool": "devil",
+  "pool_points": 10
+ },
+ {
+  "id": 4,
+  "consumable": "Eternal Heart",
+  "quality": 5,
+  "pool_influence": "Angel Room (+10x)",
+  "pool": "angel",
+  "pool_points": 10
+ },
+ {
+  "id": 5,
+  "consumable": "Gold Heart",
+  "quality": 5,
+  "pool_influence": "Golden Chest (+10x)",
+  "pool": "goldenChest",
+  "pool_points": 10
+ },
+ {
+  "id": 6,
+  "consumable": "Bone Heart",
+  "quality": 5,
+  "pool_influence": "Secret Room (+5x)",
+  "pool": "secret",
+  "pool_points": 5
+ },
+ {
+  "id": 7,
+  "consumable": "Rotten Heart",
+  "quality": 1,
+  "pool_influence": "Curse Room (+10x)",
+  "pool": "curse",
+  "pool_points": 10
+ },
+ {
+  "id": 8,
+  "consumable": "Penny",
+  "quality": 1,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 9,
+  "consumable": "Nickel",
+  "quality": 3,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 10,
+  "consumable": "Dime",
+  "quality": 5,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 11,
+  "consumable": "Lucky Penny",
+  "quality": 8,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 12,
+  "consumable": "Key",
+  "quality": 2,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 13,
+  "consumable": "Golden Key",
+  "quality": 7,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 14,
+  "consumable": "Charged Key",
+  "quality": 5,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 15,
+  "consumable": "Bomb",
+  "quality": 2,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 16,
+  "consumable": "Golden Bomb",
+  "quality": 7,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 17,
+  "consumable": "Giga Bomb",
+  "quality": 10,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 18,
+  "consumable": "Micro Battery",
+  "quality": 2,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 19,
+  "consumable": "Lil' Battery",
+  "quality": 4,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 20,
+  "consumable": "Mega Battery",
+  "quality": 8,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 21,
+  "consumable": "Card",
+  "quality": 2,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 22,
+  "consumable": "Pill",
+  "quality": 2,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 23,
+  "consumable": "Rune / Soul Stone",
+  "quality": 4,
+  "pool_influence": "Planetarium (if no Penny/Bomb/Key/Heart)",
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 24,
+  "consumable": "Dice Shard",
+  "quality": 4,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 25,
+  "consumable": "Cracked Key",
+  "quality": 2,
+  "pool_influence": "Red Chest (+10x)",
+  "pool": "redChest",
+  "pool_points": 10
+ },
+ {
+  "id": 26,
+  "consumable": "Golden Penny",
+  "quality": 7,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 27,
+  "consumable": "Golden Pill",
+  "quality": 7,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 28,
+  "consumable": "Golden Battery",
+  "quality": 7,
+  "pool_influence": null,
+  "pool": null,
+  "pool_points": 0
+ },
+ {
+  "id": 29,
+  "consumable": "Poop Nugget",
+  "quality": 0,
+  "pool_influence": "Shell Game (+10x)",
+  "pool": "shellGame",
+  "pool_points": 10
+ }
 ]

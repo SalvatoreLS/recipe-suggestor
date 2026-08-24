@@ -1,15 +1,24 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.16)
 project(RecipeSuggestorCPP LANGUAGES CXX)
 
-# Set C++ standard
-# set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Default to an optimised build. With CMAKE_BUILD_TYPE empty -- which is what
+# `cmake -S . -B build` gives you -- there is NO -O flag at all, and everything
+# here is compute-bound: detector pre/post-processing, the pipeline, and above
+# all the 2^32 seed scan in tools/find_start_seed, which runs tens of times
+# slower unoptimised.
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+    set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
+    message(STATUS "CMAKE_BUILD_TYPE was empty; defaulting to Release")
+endif()
 
 # Debug
 # add_compile_definitions(DEBUG)
 
-# Find OpenCV
+option(RS_SANITIZE "Build with the address and undefined-behaviour sanitizers" OFF)
+
 find_package(OpenCV REQUIRED)
 find_package(X11 QUIET)
 
@@ -19,69 +28,90 @@ set(ORT_INCLUDE_DIR "${ORT_ROOT}/include")
 set(ORT_LIB_DIR "${ORT_ROOT}/lib")
 find_library(ONNXRUNTIME_LIB onnxruntime HINTS ${ORT_LIB_DIR} REQUIRED)
 
-# Include headers
 include_directories(${OpenCV_INCLUDE_DIRS})
 include_directories(${CMAKE_SOURCE_DIR}/include)
 include_directories(${ORT_INCLUDE_DIR})
 
-# Collect all source files
-file(GLOB_RECURSE SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
-
-if(X11_FOUND)
-
-
-# Remove detector_torch.cpp if it's still picked up (should be deleted)
-list(REMOVE_ITEM SRC_FILES ${CMAKE_SOURCE_DIR}/src/pipeline/detector_torch.cpp)
-
-# Define executable
-add_executable(${PROJECT_NAME} ${SRC_FILES})
-
-# Link libraries
-target_link_libraries(${PROJECT_NAME} PRIVATE ${OpenCV_LIBS} ${ONNXRUNTIME_LIB} ${X11_LIBRARIES} crypto)
-
-    # Copy ONNX Runtime lib to build directory for runtime finding
-    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        ${ORT_LIB_DIR}/libonnxruntime.so.1.16.3 $<TARGET_FILE_DIR:${PROJECT_NAME}>)
-else()
-    message(WARNING "X11 not found. Skipping RecipeSuggestorCPP build.")
+add_compile_options(-Wall -Wextra)
+if(RS_SANITIZE)
+    add_compile_options(-fsanitize=address,undefined -fno-omit-frame-pointer)
+    add_link_options(-fsanitize=address,undefined)
 endif()
 
-# Test Executable
-add_executable(detector_test tests/detector_test.cpp src/detector.cpp)
-target_link_libraries(detector_test PRIVATE ${OpenCV_LIBS} ${ONNXRUNTIME_LIB})
+# ---------------------------------------------------------------------------
+# Core library: every source except main(). Each test links this instead of
+# repeating its own list of .cpp files, which is what let floor_test drift into
+# an undefined-symbol link failure.
+# ---------------------------------------------------------------------------
+file(GLOB_RECURSE RS_CORE_SRC CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/src/*.cpp)
+list(REMOVE_ITEM RS_CORE_SRC ${CMAKE_SOURCE_DIR}/src/main.cpp)
 
-add_executable(boc_test tests/boc_test.cpp src/detector.cpp)
-target_link_libraries(boc_test PRIVATE ${OpenCV_LIBS} ${ONNXRUNTIME_LIB} stdc++fs)
+if(NOT X11_FOUND)
+    message(WARNING "X11 not found: screen capture and the full pipeline are excluded.")
+    list(REMOVE_ITEM RS_CORE_SRC
+        ${CMAKE_SOURCE_DIR}/src/pipeline/nodes/frame_capturer.cpp
+        ${CMAKE_SOURCE_DIR}/src/pipeline/pipeline.cpp)
+endif()
 
-add_executable(floor_test tests/floor_test.cpp src/detector.cpp)
-target_link_libraries(floor_test PRIVATE ${OpenCV_LIBS} ${ONNXRUNTIME_LIB})
+add_library(rs_core STATIC ${RS_CORE_SRC})
+target_link_libraries(rs_core PUBLIC ${OpenCV_LIBS} ${ONNXRUNTIME_LIB} crypto)
+if(X11_FOUND)
+    target_link_libraries(rs_core PUBLIC ${X11_LIBRARIES})
+endif()
 
-add_executable(capturer_test tests/capturer_test.cpp src/pipeline/nodes/frame_capturer.cpp src/utils.cpp)
-target_link_libraries(capturer_test PRIVATE ${OpenCV_LIBS} ${X11_LIBRARIES})
+# ---------------------------------------------------------------------------
+# Runtime assets. Every binary is expected to run from its own directory, so
+# resources/ is staged next to them and all paths stay relative to the binary.
+# ---------------------------------------------------------------------------
+add_custom_target(stage_resources ALL
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${CMAKE_SOURCE_DIR}/resources ${CMAKE_CURRENT_BINARY_DIR}/resources
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${ORT_LIB_DIR}/libonnxruntime.so.1.16.3 ${CMAKE_CURRENT_BINARY_DIR}
+    COMMENT "Staging resources/ and libonnxruntime.so next to the binaries")
 
-add_executable(router_test tests/router_test.cpp src/pipeline/nodes/router.cpp src/utils.cpp)
-target_link_libraries(router_test PRIVATE ${OpenCV_LIBS})
+# ---------------------------------------------------------------------------
+# Executables
+# ---------------------------------------------------------------------------
+if(X11_FOUND)
+    add_executable(${PROJECT_NAME} src/main.cpp)
+    target_link_libraries(${PROJECT_NAME} PRIVATE rs_core)
+    add_dependencies(${PROJECT_NAME} stage_resources)
+endif()
 
-add_executable(bag_of_crafting_test tests/bag_of_crafting_test.cpp src/bag_of_crafting.cpp src/utils.cpp)
-target_link_libraries(bag_of_crafting_test PRIVATE ${OpenCV_LIBS} crypto)
+# ROI calibration helper (not a test -- human looks at the overlay it writes)
+add_executable(roi_preview tools/roi_preview.cpp)
+target_link_libraries(roi_preview PRIVATE rs_core)
+add_dependencies(roi_preview stage_resources)
 
-# For pipeline test
-add_executable(pipeline_test tests/pipeline_test.cpp 
-    src/pipeline/pipeline.cpp 
-    src/pipeline/nodes/frame_capturer.cpp 
-    src/pipeline/nodes/router.cpp 
-    src/pipeline/nodes/floor_detector.cpp
-    src/detector.cpp 
-    src/pipeline/nodes/recipe_suggestor.cpp
-    src/utils.cpp)
-target_link_libraries(pipeline_test PRIVATE ${OpenCV_LIBS} ${ONNXRUNTIME_LIB} ${X11_LIBRARIES})
-add_executable(trie_test tests/trie_test.cpp src/data_structures/trie.cpp)
-target_link_libraries(trie_test PRIVATE ${OpenCV_LIBS} ${ONNXRUNTIME_LIB})
+# Records crafts from the live game into an observations file
+if(X11_FOUND)
+    add_executable(craft_recorder tools/craft_recorder.cpp)
+    target_link_libraries(craft_recorder PRIVATE rs_core)
+    add_dependencies(craft_recorder stage_resources)
+endif()
 
-# Copy ONNX Runtime lib to build directory for runtime finding
-foreach(TARGET_NAME detector_test boc_test floor_test capturer_test router_test pipeline_test trie_test)
-    add_custom_command(TARGET ${TARGET_NAME} POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        ${ORT_LIB_DIR}/libonnxruntime.so.1.16.3 $<TARGET_FILE_DIR:${TARGET_NAME}>)
+# Reads the bag out of captured frames, for building observations
+add_executable(bag_log tools/bag_log.cpp)
+target_link_libraries(bag_log PRIVATE rs_core)
+add_dependencies(bag_log stage_resources)
+
+# Recovers the run's 32-bit crafting seed from observed crafts
+add_executable(find_start_seed tools/find_start_seed.cpp)
+target_link_libraries(find_start_seed PRIVATE rs_core)
+add_dependencies(find_start_seed stage_resources)
+
+set(RS_TESTS detector_test boc_test boc_geometry_test screen_regression_test floor_test router_test bag_of_crafting_test trie_test data_test suggestor_test)
+if(X11_FOUND)
+    list(APPEND RS_TESTS capturer_test pipeline_test)
+endif()
+
+enable_testing()
+foreach(TEST_NAME ${RS_TESTS})
+    add_executable(${TEST_NAME} tests/${TEST_NAME}.cpp)
+    target_link_libraries(${TEST_NAME} PRIVATE rs_core)
+    add_dependencies(${TEST_NAME} stage_resources)
+    add_test(NAME ${TEST_NAME}
+             COMMAND ${TEST_NAME}
+             WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 endforeach()

@@ -8,35 +8,21 @@
 #include <opencv2/core.hpp>
 
 #include "detector.hpp"
+#include "constants.hpp"
 
 namespace {
 namespace fs = std::filesystem;
 
-std::vector<std::string> load_class_names(const fs::path& txt_path) {
-    std::vector<std::string> names;
-    std::ifstream in(txt_path);
-    if (!in.is_open()) {
-        return names;
-    }
-    std::string line;
-    while (std::getline(in, line)) {
-        if (!line.empty()) {
-            names.push_back(line);
-        }
-    }
-    return names;
-}
 }
 
-int main(int argc, char** argv) {
+int main(int, char**) {
 
     // Input and output
-    const std::string images_path = "../resources/test_images/";
-    const std::string save_path = "../outputs/";
+    const std::string images_path = "resources/test_images/";
+    const std::string save_path = "outputs/";
 
     // ONNX model
-    const std::string model_path = "../resources/models/best.onnx";
-    const std::string labels_path = "../resources/models/synset.txt";
+    const std::string model_path = constants::boc_model_path;
 
     const int width = 640;
     const int height = 640;
@@ -92,8 +78,7 @@ int main(int argc, char** argv) {
             std::vector<Prediction> predictions;
             auto detected = detector.detect(test_image, &predictions);
 
-            std::vector<std::string> class_names = load_class_names(labels_path);
-            cv::Mat vis_image = detector.visualize_detections(test_image, predictions, class_names);
+            cv::Mat vis_image = detector.visualize_detections(test_image, predictions);
 
             fs::path save_dir = fs::path(save_path);
             if (!save_dir.empty()) {
@@ -118,13 +103,14 @@ int main(int argc, char** argv) {
             std::cout << "[SUCCESS] Detector ran successfully. Returned label container (type: "
                 << typeid(detected).name() << ")" << std::endl;
 
-            /* TODO: ADD CLASS NAMES
-            std::cout << "Detected Labels (ItemIDs): ";
-            for (const auto& label_node : detected) {
-                std::cout << label_node << " ";
+            const auto& class_names = detector.class_names();
+            std::cout << "Detected labels: ";
+            for (const auto& pred : predictions) {
+                std::cout << (pred.classId < (int)class_names.size()
+                                  ? class_names[pred.classId]
+                                  : std::to_string(pred.classId))
+                          << " ";
             }
-            */
-           
             std::cout << std::endl;
 
         } catch (const cv::Exception &e) {

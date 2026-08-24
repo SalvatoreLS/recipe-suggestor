@@ -8,8 +8,9 @@
 
 class FloorDetector : public Detector {
 public:
-    FloorDetector(const std::string& model_path, int wid, int hei) 
-        : Detector(model_path, wid, hei) {}
+    // The floor dataset is whole frames squashed to 640x640 by Roboflow.
+    FloorDetector(const std::string& model_path, int wid, int hei)
+        : Detector(model_path, wid, hei, types::Preprocess::Stretch) {}
 
     std::map<types::ConsumableID, types::Quantity> detect_floor(const cv::Mat& frame, std::vector<Prediction>* out_predictions = nullptr);
 };

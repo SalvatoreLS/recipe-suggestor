@@ -55,12 +55,19 @@ recipe_suggestor_java/README.md
 
 # C++
 recipe_suggestor_cpp/build/
-recipe_suggestor_cpp/libtorch/
 recipe_suggestor_cpp/outputs/
 recipe_suggestor_cpp/lib
-recipe_suggestor_cpp/resources/test_images/
+# Dataset crops stay out, but git cannot look inside an excluded directory, so
+# exclude the contents and re-include the screens/ the live-path tests assert on
+recipe_suggestor_cpp/resources/test_images/*
+!recipe_suggestor_cpp/resources/test_images/screens/
+recipe_suggestor_cpp/crafts_run*/
 
 # Models / Data / Training
+# Roboflow dataset exports: re-downloadable, tens of MB
+models_training/pickups---TBOI-*/
+# Pretrained weights fetched by the training scripts
+yolo11s.pt
 models_training/runs/
 models_training/lib/
 models_training/outputs
@@ -70,6 +77,7 @@ yolov8n.pt
 cp.txt
 
 # Specific Binaries / Temp / Archives
+ResourceExtractor_log.txt
 opencodetmp/
 test_cpp
 *.log

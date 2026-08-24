@@ -1,0 +1,66 @@
+{
+  "_comment": [
+    "Maps a detector class index to the consumable(s) it contributes to the crafting bag.",
+    "The value is a LIST because several floor labels are quantity multipliers rather",
+    "than distinct consumables: a full red heart pickup is two Red Heart units, a double",
+    "heart is four, and red_soul_heart is genuinely compound (one red + one soul).",
+    "'expects_classes' must match the class list the ONNX model reports in its metadata;",
+    "loading refuses otherwise, which is the only guard against silently using the wrong",
+    "model (both models are nc:21 and emit an identical [1,25,8400] tensor).",
+    "The qty values are game-knowledge judgement calls -- edit them here, no rebuild needed."
+  ],
+  "boc": {
+    "expects_classes": ["black_heart","bomb","bone_heart","card","charged_key","dime","eternal_heart","extra","golden_bomb","golden_key","key","lucky_penny","mega_battery","micro_battery","nickel","penny","pill","red_heart","rotten_heart","rune","soul_heart"],
+    "map": [
+      {"name": "black_heart",   "consumables": [{"id": 3,  "qty": 1}]},
+      {"name": "bomb",          "consumables": [{"id": 15, "qty": 1}]},
+      {"name": "bone_heart",    "consumables": [{"id": 6,  "qty": 1}]},
+      {"name": "card",          "consumables": [{"id": 21, "qty": 1}]},
+      {"name": "charged_key",   "consumables": [{"id": 14, "qty": 1}]},
+      {"name": "dime",          "consumables": [{"id": 10, "qty": 1}]},
+      {"name": "eternal_heart", "consumables": [{"id": 4,  "qty": 1}]},
+      {"name": "extra",         "consumables": []},
+      {"name": "golden_bomb",   "consumables": [{"id": 16, "qty": 1}]},
+      {"name": "golden_key",    "consumables": [{"id": 13, "qty": 1}]},
+      {"name": "key",           "consumables": [{"id": 12, "qty": 1}]},
+      {"name": "lucky_penny",   "consumables": [{"id": 11, "qty": 1}]},
+      {"name": "mega_battery",  "consumables": [{"id": 20, "qty": 1}]},
+      {"name": "micro_battery", "consumables": [{"id": 18, "qty": 1}]},
+      {"name": "nickel",        "consumables": [{"id": 9,  "qty": 1}]},
+      {"name": "penny",         "consumables": [{"id": 8,  "qty": 1}]},
+      {"name": "pill",          "consumables": [{"id": 22, "qty": 1}]},
+      {"name": "red_heart",     "consumables": [{"id": 1,  "qty": 1}]},
+      {"name": "rotten_heart",  "consumables": [{"id": 7,  "qty": 1}]},
+      {"name": "rune",          "consumables": [{"id": 23, "qty": 1}]},
+      {"name": "soul_heart",    "consumables": [{"id": 2,  "qty": 1}]}
+    ]
+  },
+  "floor": {
+    "expects_classes": ["battery","black_heart","bomb","bone_heart","card","dime","double_bomb","double_heart","eternal_heart","golden_bomb","golden_penny","half_heart","half_soul_heart","key","mega_battery","micro_battery","nickel","penny","pill","red_heart","red_soul_heart","rotten_heart","soul_heart"],
+    "map": [
+      {"name": "battery",         "consumables": [{"id": 19, "qty": 1}]},
+      {"name": "black_heart",     "consumables": [{"id": 3, "qty": 1}]},
+      {"name": "bomb",            "consumables": [{"id": 15, "qty": 1}]},
+      {"name": "bone_heart",      "consumables": [{"id": 6, "qty": 1}]},
+      {"name": "card",            "consumables": [{"id": 21, "qty": 1}]},
+      {"name": "dime",            "consumables": [{"id": 10, "qty": 1}]},
+      {"name": "double_bomb",     "consumables": [{"id": 15, "qty": 2}]},
+      {"name": "double_heart",    "consumables": [{"id": 1, "qty": 4}]},
+      {"name": "eternal_heart",   "consumables": [{"id": 4, "qty": 1}]},
+      {"name": "golden_bomb",     "consumables": [{"id": 16, "qty": 1}]},
+      {"name": "golden_penny",    "consumables": [{"id": 26, "qty": 1}]},
+      {"name": "half_heart",      "consumables": [{"id": 1, "qty": 1}]},
+      {"name": "half_soul_heart", "consumables": [{"id": 2, "qty": 1}]},
+      {"name": "key",             "consumables": [{"id": 12, "qty": 1}]},
+      {"name": "mega_battery",    "consumables": [{"id": 20, "qty": 1}]},
+      {"name": "micro_battery",   "consumables": [{"id": 18, "qty": 1}]},
+      {"name": "nickel",          "consumables": [{"id": 9, "qty": 1}]},
+      {"name": "penny",           "consumables": [{"id": 8, "qty": 1}]},
+      {"name": "pill",            "consumables": [{"id": 22, "qty": 1}]},
+      {"name": "red_heart",       "consumables": [{"id": 1, "qty": 2}]},
+      {"name": "red_soul_heart",  "consumables": [{"id": 1, "qty": 1}, {"id": 2, "qty": 1}]},
+      {"name": "rotten_heart",    "consumables": [{"id": 7, "qty": 1}]},
+      {"name": "soul_heart",      "consumables": [{"id": 2, "qty": 2}]}
+    ]
+  }
+}

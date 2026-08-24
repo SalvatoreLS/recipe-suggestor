@@ -4,7 +4,10 @@
 #include <cstddef>
 #include <initializer_list>
 #include <string>
+#include <sstream>
+#include <type_traits>
 #include <atomic>
+#include <vector>
 #include <iterator>
 #include <thread>
 
@@ -176,7 +179,15 @@ public:
         Node<T>* temp = head;
         return_string.append("[");
         do {
-            return_string.append(std::to_string(temp->value));
+            // std::to_string only exists for arithmetic types; fall back to ADL
+            // to_string / operator<< so the template still compiles for others.
+            if constexpr (std::is_arithmetic_v<T>) {
+                return_string.append(std::to_string(temp->value));
+            } else {
+                std::ostringstream oss;
+                oss << temp->value;
+                return_string.append(oss.str());
+            }
             temp = temp->next;
             if (temp != head) return_string.append(", ");
         } while (temp != head);
@@ -292,6 +303,21 @@ public:
         const Node<T>* cur;
         const Node<T>* head;
     };
+
+    // Copies the whole list under the list's own lock. begin()/end() release
+    // the lock on return, so iterating a list another thread may touch is not
+    // safe; take a snapshot instead.
+    std::vector<T> snapshot() const {
+        LockGuard lock(this);
+        std::vector<T> out;
+        if (!head) return out;
+        const Node<T>* cur = head;
+        do {
+            out.push_back(cur->value);
+            cur = cur->next;
+        } while (cur && cur != head);
+        return out;
+    }
 
     iterator begin() {
         LockGuard lock(this);
