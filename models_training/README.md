@@ -1,16 +1,15 @@
 # Model training
 
-Trains the two YOLOv8 detectors the C++ assistant uses:
+Trains the two YOLOv8 detectors the assistant uses:
 
 | Model | Dataset | Classes | Output |
 |---|---|---|---|
-| Bag of Crafting | `BoC---TBOI-6/` (300 train / 17 val) | 21 | `../recipe_suggestor_cpp/resources/models/boc_best.onnx` |
-| Floor pickups | `pickups---TBOI-2/` (285 train / 19 val) | 23 | `../recipe_suggestor_cpp/resources/models/floor_best.onnx` |
+| Bag of Crafting | `BoC---TBOI-6/` (300 train / 17 val) | 21 | `../recipe_suggestor/resources/models/boc_best.onnx` |
+| Floor pickups | `pickups---TBOI-2/` (285 train / 19 val) | 23 | `../recipe_suggestor/resources/models/floor_best.onnx` |
 
 The two class lists are **different**, and were both 21 classes until the floor dataset's v2 added
 `black_heart` and `micro_battery`. Loading the wrong file produces confident nonsense rather than an
-error, so the exported model's class names are checked against `class_map.json` at load time on the
-C++ side — keep `floor.expects_classes` in step with `data.yaml`'s `names`, in the same order.
+error, so the exported model's class names are checked against `class_map.json` at load time — keep `floor.expects_classes` in step with `data.yaml`'s `names`, in the same order.
 
 ### Floor dataset: use v2, not v1
 
@@ -103,7 +102,7 @@ previous scripts hardcoded `runs/detect/train/weights/best.pt` and would happily
 ## Extracting the real game data
 
 `extract_game_data.py` recovers the collectible quality table and item pools from the installed
-game, producing `../recipe_suggestor_cpp/resources/collectibles.json` (721 entries).
+game, producing `../recipe_suggestor/resources/collectibles.json` (721 entries).
 
 ```bash
 python3 extract_game_data.py                      # uses the default install path
@@ -127,12 +126,11 @@ are excluded — they are no longer craftable results.
 
 ## Export contract
 
-The C++ side must match how the models were trained: 640×640 letterboxed, fixed `{1,3,640,640}`
+The inference side must match how the models were trained: 640×640 letterboxed, fixed `{1,3,640,640}`
 input (`dynamic=False`), scale `1/255`, no mean subtraction, RGB, opset 12. The output is the
 transposed YOLOv8 layout with no objectness column and no built-in NMS.
 
 ## Compatibility checks
 
-- `cpp_compatibility_test/` — loads the exported ONNX in ONNX Runtime and runs one forward pass
-- `java_compatibility_test/` — the DJL equivalent
+- `compatibility_test/` — loads the exported ONNX in ONNX Runtime and runs one forward pass
 - `test.py` — visual smoke test over `test_images/`, writing to `outputs/`

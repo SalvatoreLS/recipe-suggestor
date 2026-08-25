@@ -1,6 +1,6 @@
-# RecipeSuggestorCPP
+# Isaac Assistant
 
-C++ implementation of the Isaac crafting assistant. Captures the screen, detects the contents of
+The Isaac crafting assistant. Captures the screen, detects the contents of
 Tainted Cain's crafting bag and the pickups lying on the floor with two YOLOv8 ONNX models, and
 prints ranked recipe suggestions.
 
@@ -10,12 +10,13 @@ prints ranked recipe suggestions.
 - **OpenCV** 4.x
 - **X11** development headers (screen capture; without them only the offline tests build)
 - **OpenSSL** (`libcrypto`)
-- **ONNX Runtime** — vendored under `lib/onnxruntime-linux-x64-1.16.3`, fetched by `./setup_cpp_env.sh`
+- **ONNX Runtime** — vendored under `lib/onnxruntime-linux-x64-1.16.3`, fetched by `./setup_env.sh`
+- **The two trained models**, which are not in the repository — see below
 
 ## Build
 
 ```bash
-./setup_cpp_env.sh        # once, downloads ONNX Runtime
+./setup_env.sh        # once, downloads ONNX Runtime into lib/
 cmake -S . -B build
 cmake --build build -j
 ```
@@ -25,23 +26,47 @@ from `build/` with paths relative to itself.
 
 Optional: `cmake -S . -B build -DRS_SANITIZE=ON` for an ASan/UBSan build.
 
+## Getting the models
+
+`resources/models/boc_best.onnx` and `resources/models/floor_best.onnx` are **not committed**: they
+are ~12 MB of build output, reproducible from the datasets. Train and export them from
+`../models_training/`, which writes straight into `resources/models/`:
+
+```bash
+cd ../models_training
+pip install ultralytics roboflow python-dotenv pyyaml
+python3 train_boc.py   --data BoC---TBOI-6/data.yaml
+python3 train_floor.py --data pickups---TBOI-2/data.yaml
+```
+
+Without a local dataset the scripts pull it from Roboflow using a `.env` you supply
+(`ROBOFLOW_API_KEY`, `ROBOFLOW_WORKSPACE`, the project and version names). `.env` is gitignored and
+no key belongs in the tree.
+
+Rebuild after dropping a model in — `resources/` is staged into `build/` at build time, so a model
+copied into the source tree only reaches the binaries on the next `cmake --build`.
+
+Missing models degrade rather than crash: the pipeline logs and runs BoC-only without the floor
+model, and `floor_test` skips itself. Both missing means no detections at all.
+
 ## Run
 
 ```bash
 cd build
 
 # Live, against a running game
-./RecipeSuggestorCPP --seed "7W2N L9AK" --start-seed 3735928559
+./RecipeSuggestor --seed "7W2N L9AK" --start-seed 3735928559
 
 # Offline, over a directory of images -- no X11 and no game needed
-./RecipeSuggestorCPP --replay resources/test_images --seed "7W2N L9AK"
+./RecipeSuggestor --replay resources/test_images/screens --seed "7W2N L9AK"
 ```
 
 | Flag | Meaning |
 |---|---|
 | `--seed "<run seed>"` | the run seed; crafting results depend on it |
 | `--replay <dir>` | run over images instead of capturing the screen |
-| `--start-seed <n>` | the run's 32-bit crafting seed, which is what names the crafted item; recover it with `find_start_seed` |
+| `--start-seed <n\|file>` | the run's 32-bit crafting seed, which is what names the crafted item; recover it with `find_start_seed`. Also accepts that tool's `--out` file, so a half-narrowed search is usable as is |
+| `--help` | the flag list |
 
 Ctrl-C shuts the pipeline down cleanly.
 
@@ -131,7 +156,7 @@ cat > obs.txt <<'EOT'
 177  8 8 8 8 8 8 8 8
 EOT
 cd build && ./find_start_seed obs.txt      # scans all 2^32 seeds
-./RecipeSuggestorCPP --seed "9W4T 9ZJ2" --start-seed <the number it prints>
+./RecipeSuggestor --seed "9W4T 9ZJ2" --start-seed <the number it prints>
 ```
 
 The scan takes about 3.5 minutes on 12 cores and reports how many seeds survive each craft. One
@@ -192,8 +217,9 @@ writes `outputs/roi_overlay.png` plus the exact images the two detectors receive
 cd build && ctest --output-on-failure
 ```
 
-`floor_test` skips itself when `resources/models/floor_best.onnx` is absent; train it with
-`python3 models_training/train_floor.py --data pickups---TBOI-2/data.yaml`.
+Tests that need a model skip themselves when it is absent, so a fresh clone with no models still
+builds and runs the offline suite. `floor_test` in particular skips without
+`resources/models/floor_best.onnx`; see **Getting the models** above.
 
 Two of the tests guard the **live** path rather than the dataset one, and they are the ones that
 fail if the strip rect or the preprocessing drifts: `boc_geometry_test` (synthetic, no game needed)
@@ -210,5 +236,12 @@ is nothing.
   item-pool influence), `items.json` (726 collectible names), `collectibles.json` (721 entries of
   real quality / pool data from the game), `fixed.json` (known-good recipes), `class_map.json`
   (detector class → consumable mapping)
+- `tools/` — not tests: `roi_preview` (recalibrate the capture regions), `find_start_seed` (recover
+  the run's crafting seed), `craft_recorder` (record real crafts from the live game), `bag_log`
+  (read the bag out of saved frames)
 - `HASHING.md` — notes on the Tainted Cain crafting mechanics
+- `HANDOFF.md` — current state, what is verified, and the one open experiment
 - `TODO.md` — remaining work
+
+Not in the repository, by design: `build/`, `lib/` (ONNX Runtime, fetched), `resources/models/`
+(trained weights), `resources/test_images/` apart from `screens/` (dataset crops).

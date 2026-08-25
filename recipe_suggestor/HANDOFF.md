@@ -78,7 +78,7 @@ bag of 8 empties (which is what crafting looks like), writes the exact 8 compone
 plus the frame captured right after, so the collectible that popped out can be identified.
 
 ```bash
-cd recipe_suggestor_cpp/build
+cd recipe_suggestor/build
 ./craft_recorder --seconds 1200 --out crafts_run4
 ```
 
@@ -113,10 +113,10 @@ of 40 test bags. Treat the exact seed as the requirement.
 ## Running the app
 
 ```bash
-cd recipe_suggestor_cpp/build
-./RecipeSuggestorCPP --seed "9W4T 9ZJ2"                      # live
-./RecipeSuggestorCPP --seed "9W4T 9ZJ2" --start-seed 123456  # with item names
-./RecipeSuggestorCPP --replay resources/test_images --seed "9W4T 9ZJ2"   # no game needed
+cd recipe_suggestor/build
+./RecipeSuggestor --seed "9W4T 9ZJ2"                      # live
+./RecipeSuggestor --seed "9W4T 9ZJ2" --start-seed 123456  # with item names
+./RecipeSuggestor --replay resources/test_images --seed "9W4T 9ZJ2"   # no game needed
 ctest                                                        # 12 tests, all green
 ```
 

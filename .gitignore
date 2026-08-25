@@ -1,85 +1,75 @@
-# General files
+# ---------------------------------------------------------------------------
+# Retired Java version
+# ---------------------------------------------------------------------------
+# The Java prototype is no longer part of this project. It is kept out of the
+# tree entirely; C++ is the only version.
+recipe_suggestor_java/
+models_training/java_compatibility_test/
+.github/java-upgrade/
+
+# ---------------------------------------------------------------------------
+# Models and datasets
+# ---------------------------------------------------------------------------
+# Trained weights are ~12 MB each and are reproducible from models_training/.
+# They are never committed; see recipe_suggestor/README.md "Getting the models".
+*.onnx
+*.pt
+*.pth
+recipe_suggestor/resources/models/
+
+# Roboflow dataset exports: re-downloadable, tens of MB
+models_training/pickups---TBOI-*/
+models_training/BoC---TBOI*/
+models_training/runs/
+models_training/lib/
+models_training/outputs/
+models_training/test_images/
+
+# ---------------------------------------------------------------------------
+# Build output
+# ---------------------------------------------------------------------------
+recipe_suggestor/build/
+recipe_suggestor/outputs/
+recipe_suggestor/lib/
+recipe_suggestor/crafts_run*/
+build/
+dist/
+test_cpp
+
+# Dataset crops stay out, but git cannot look inside an excluded directory, so
+# exclude the contents and re-include the screens/ the live-path tests assert on
+recipe_suggestor/resources/test_images/*
+!recipe_suggestor/resources/test_images/screens/
+
+# ---------------------------------------------------------------------------
+# General
+# ---------------------------------------------------------------------------
 .env
 .env.local
 .DS_Store
 Thumbs.db
-ISSUES.md
-TODO.md
-HASHING.md
 .cache/
+ISSUES.md
+opencodetmp/
+cp.txt
 
 # Editors / IDEs
 .idea/
 .vscode/
-.eclipse/
-.classpath
-.project
-.settings/
 *.swp
 *.swo
 *~
-*.iml
-*.iws
-*.ipr
 .clang-format
 
 # Python
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyc
 *.egg-info/
-.Python
-build/
-dist/
-*.egg
 .ruff_cache
 debug*
 
-# Java / Maven
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-.flattened-pom.xml
-*.class
-*.jar
-*.war
-*.ear
-recipe_suggestor_java/bin/
-recipe_suggestor_java/output_test_image.jpg
-recipe_suggestor_java/README.md
-
-# C++
-recipe_suggestor_cpp/build/
-recipe_suggestor_cpp/outputs/
-recipe_suggestor_cpp/lib
-# Dataset crops stay out, but git cannot look inside an excluded directory, so
-# exclude the contents and re-include the screens/ the live-path tests assert on
-recipe_suggestor_cpp/resources/test_images/*
-!recipe_suggestor_cpp/resources/test_images/screens/
-recipe_suggestor_cpp/crafts_run*/
-
-# Models / Data / Training
-# Roboflow dataset exports: re-downloadable, tens of MB
-models_training/pickups---TBOI-*/
-# Pretrained weights fetched by the training scripts
-yolo11s.pt
-models_training/runs/
-models_training/lib/
-models_training/outputs
-models_training/test_images
-models_training/BoC---TBOI*
-yolov8n.pt
-cp.txt
-
-# Specific Binaries / Temp / Archives
+# Logs / temp / archives
 ResourceExtractor_log.txt
-opencodetmp/
-test_cpp
 *.log
 *.zip
 *.tar.gz

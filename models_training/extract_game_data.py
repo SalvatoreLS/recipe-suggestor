@@ -27,9 +27,9 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
-ITEMS_JSON = REPO / "recipe_suggestor_cpp" / "resources" / "items.json"
-DEFAULT_OUT = REPO / "recipe_suggestor_cpp" / "resources" / "collectibles.json"
-DEFAULT_POOLS_OUT = REPO / "recipe_suggestor_cpp" / "resources" / "itempools.json"
+ITEMS_JSON = REPO / "recipe_suggestor" / "resources" / "items.json"
+DEFAULT_OUT = REPO / "recipe_suggestor" / "resources" / "collectibles.json"
+DEFAULT_POOLS_OUT = REPO / "recipe_suggestor" / "resources" / "itempools.json"
 
 DEFAULT_GAME_DIR = Path.home() / (
     "Programs/The.Binding.of.Isaac.Rebirth.Repentance.Nexusgames.to/"

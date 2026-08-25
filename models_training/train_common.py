@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 from ultralytics import YOLO
 
 HERE = Path(__file__).resolve().parent
-MODELS_DIR = HERE.parent / "recipe_suggestor_cpp" / "resources" / "models"
+MODELS_DIR = HERE.parent / "recipe_suggestor" / "resources" / "models"
 # Starting weights. A bare filename is resolved next to this script if it is
 # already downloaded, otherwise Ultralytics fetches it by name. yolo11s is the
 # recommended upgrade: it keeps the same detection head layout as yolov8
