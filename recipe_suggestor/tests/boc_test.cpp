@@ -11,13 +11,16 @@ int main() {
     std::string image_path = "resources/test_images/C00144_png.rf.a60cb305b62d17bb303017d841b5c12b.jpg";
     std::string output_path = "outputs/boc_test_result.jpg";
 
+    // Both inputs are out-of-tree: the model is build output and the image is a
+    // dataset crop, neither of which a fresh clone has. Skip rather than fail, the
+    // way floor_test and screen_regression_test already do.
     if (!fs::exists(model_path)) {
-        std::cerr << "Model not found: " << model_path << std::endl;
-        return 1;
+        std::cout << "boc_test skipped: " << model_path << " not present" << std::endl;
+        return 0;
     }
     if (!fs::exists(image_path)) {
-        std::cerr << "Image not found: " << image_path << std::endl;
-        return 1;
+        std::cout << "boc_test skipped: " << image_path << " not present" << std::endl;
+        return 0;
     }
 
     // Initialize BoC Detector

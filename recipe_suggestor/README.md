@@ -217,9 +217,12 @@ writes `outputs/roi_overlay.png` plus the exact images the two detectors receive
 cd build && ctest --output-on-failure
 ```
 
-Tests that need a model skip themselves when it is absent, so a fresh clone with no models still
-builds and runs the offline suite. `floor_test` in particular skips without
-`resources/models/floor_best.onnx`; see **Getting the models** above.
+Tests that need a model, or a dataset crop from `resources/test_images/`, skip themselves when it is
+absent and pass — so a fresh clone with neither still builds and runs the offline suite (10 of the
+12 tests). That is what CI runs on each push; see **Getting the models** above for the other two.
+
+`capturer_test` and `pipeline_test` are the exceptions: they need a real X display with real content
+on it, so they are excluded in CI and only meaningful on your own desktop.
 
 Two of the tests guard the **live** path rather than the dataset one, and they are the ones that
 fail if the strip rect or the preprocessing drifts: `boc_geometry_test` (synthetic, no game needed)

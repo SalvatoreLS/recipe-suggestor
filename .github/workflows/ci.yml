@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [main, crafting-real-algorithm]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    name: Build and test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # X11 headers are installed on purpose: without them CMake drops
+      # frame_capturer, pipeline and the main binary from the build, and a
+      # compile error in any of them would go unnoticed. The two tests that
+      # need a real desktop are excluded at run time instead, below.
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential cmake libopencv-dev libssl-dev libx11-dev wget
+
+      # ONNX Runtime is a ~45 MB tarball fetched from GitHub releases; the
+      # version is pinned inside setup_env.sh, so that file is the cache key.
+      - name: Cache ONNX Runtime
+        uses: actions/cache@v4
+        with:
+          path: recipe_suggestor/lib
+          key: ort-${{ runner.os }}-${{ hashFiles('recipe_suggestor/setup_env.sh') }}
+
+      - name: Fetch ONNX Runtime
+        working-directory: recipe_suggestor
+        run: ./setup_env.sh
+
+      - name: Configure
+        working-directory: recipe_suggestor
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        working-directory: recipe_suggestor
+        run: cmake --build build -j"$(nproc)"
+
+      # The trained models are not in the repository and the dataset crops are
+      # gitignored, so every test that needs one skips itself and passes. What
+      # remains under test here is the offline half: the crafting algorithm, the
+      # suggestor, the data layer, the router and the containers.
+      #
+      # capturer_test and pipeline_test are excluded because they need a real X
+      # display with real content on it -- capturer_test asserts the captured
+      # frame is not a flat colour, which is exactly what a headless Xvfb gives.
+      - name: Test
+        working-directory: recipe_suggestor/build
+        run: ctest --output-on-failure -E 'capturer_test|pipeline_test'

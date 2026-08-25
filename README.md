@@ -1,5 +1,8 @@
 # Isaac Assistant
 
+[![CI](https://github.com/SalvatoreLS/recipe-suggestor/actions/workflows/ci.yml/badge.svg)](https://github.com/SalvatoreLS/recipe-suggestor/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 A real-time crafting assistant for **The Binding of Isaac: Repentance**, for Tainted Cain.
 
 It watches the game screen, reads what is in the crafting bag and what pickups are lying on the
@@ -68,7 +71,8 @@ them, otherwise pass a `data.yaml` already on disk. See
 [`models_training/README.md`](models_training/README.md).
 
 The app degrades rather than crashing when a model is missing: without the floor model it runs
-BoC-only, and `floor_test` skips itself.
+BoC-only, and every test that needs a model skips itself and passes — so a fresh clone builds and
+runs the offline suite with nothing extra installed. That is what CI does on each push.
 
 ## Project status
 
@@ -105,6 +109,10 @@ The two open weaknesses, both documented in detail rather than papered over:
   [`models_training/README.md`](models_training/README.md), not the headline number.
 
 Remaining work is tracked in [`recipe_suggestor/TODO.md`](recipe_suggestor/TODO.md).
+
+## License
+
+MIT — see [`LICENSE`](LICENSE).
 
 ## Requirements
 
